@@ -1,1 +1,2 @@
-console.log("HELOPO")
+console.log("HELOPO") 
+alert("daddy")
