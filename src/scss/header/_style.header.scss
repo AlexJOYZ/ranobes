@@ -1,0 +1,105 @@
+@import './vars.header';
+
+.header {
+  background-color: $backColour;
+  max-width: $widthHeader;
+  position: absolute;
+  border-radius: $sizeRadiusContainer 0px 0px $sizeRadiusContainer;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  .header__top {
+    transition: all 0.4s ease-in;
+  }
+  .fixed {
+    position: fixed;
+    top: 0;
+    transition: all 0.4s ease-in;
+  }
+  .btn__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $widthHeader;
+    height: $widthHeader;
+    box-shadow:
+      0 1px 0 0 transparent,
+      inset 0 -1px 0 0 #3b3b3b;
+  }
+  .btn__menu svg {
+    transition: all 0.3s;
+  }
+  .btn__menu:hover {
+    svg {
+      fill: #171717;
+      stroke: #171717;
+    }
+  }
+  .btn__menu:first-child:hover {
+    svg {
+      fill: $colorHeaderIcons;
+      stroke: $colorHeaderIcons;
+    }
+  }
+  .svg__logo {
+    width: calc($widthHeader/2);
+    height: calc($widthHeader/2);
+  }
+  .icon-login {
+    width: 34px;
+    height: 38px;
+    fill: $colorHeaderIcons;
+    stroke: $colorHeaderIcons;
+  }
+  .burger {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .burger:hover {
+    .burger__line {
+      background-color: #1a1a1a;
+    }
+  }
+  .burger__line {
+    height: 3px;
+    width: calc($widthHeader/2);
+    background-color: #3b3a3a;
+    border-radius: 2px;
+    margin-bottom: 6px;
+    transition: all 0.3s;
+  }
+  .burger__line:last-child {
+    margin-bottom: 0;
+  }
+  .header__theme svg {
+    fill: $colorHeaderIcons;
+    height: 48px;
+    width: 48px;
+  }
+  .header__upper {
+    width: $widthHeader;
+    height: $widthHeader;
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+  }
+  .header__upper svg {
+    width: calc($widthHeader/4);
+    fill: #3b3a3a;
+    height: $widthHeader;
+  }
+  .header__upper:hover {
+    svg {
+      fill: #a9a9a9;
+      stroke: #a9a9a9;
+    }
+  }
+}
+main {
+  border-left: solid #3b3b3b 1px;
+  display: flex;
+  margin-left: $widthHeader;
+}

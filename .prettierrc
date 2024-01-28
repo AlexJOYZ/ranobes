@@ -1,4 +1,16 @@
 {
+<<<<<<< HEAD
+  "printWidth": 100,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "trailingComma": "all",
+  "semi": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "endOfLine": "lf",
+  "arrowParens": "always",
+  "bracketSpacing": true
+=======
     "printWidth": 100,
     "singleQuote": true,
     "jsxSingleQuote": true,
@@ -9,4 +21,5 @@
     "endOfLine": "lf",
     "arrowParens": "always",
     "bracketSpacing": true
+>>>>>>> 3a7de440a38cb444ff2c0e88d26163b5b1ed3f81
 }
