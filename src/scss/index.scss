@@ -1,0 +1,61 @@
+@import './header/style.header';
+@import './NewNovels/style.newnovels';
+@import './fonts';
+
+* {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  background-color: $bodyColour;
+  font-family: 'GothamPro-Light';
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.012em;
+  line-height: 1.5;
+  color: #cccccc;
+  .page {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  .body {
+    background-color: $backColour;
+    box-shadow:
+      0 2px 6px 0 rgba(0, 0, 0, 0.11),
+      0 0 35px 0 rgba(0, 0, 0, 0.06);
+    border-radius: $sizeRadiusContainer;
+    position: relative;
+    
+  }
+  .container {
+    display: flex;
+  }
+  .content {
+    width: 67.74%;
+    border-right: 1px solid #3b3b3b;
+  }
+  .btn {
+    font-family: 'GothamPro-Bold';
+    border-radius: 20px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14);
+    background-image: -webkit-linear-gradient(top, #626262 0%, #626262 100%);
+    background-color: #626262;
+    text-align: center;
+    color: #efefef;
+  }
+  .btn:hover {
+    background-color: #5d5c5c;
+    background-image: -webkit-linear-gradient(top, #5d5c5c 0%, #818181 100%);
+    transition: all 0.3s ease-in-out;
+  }
+  .block {
+    margin: 35px 0;
+    padding: 0 35px;
+  }
+}
