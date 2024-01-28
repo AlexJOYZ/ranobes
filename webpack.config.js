@@ -1,11 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-<<<<<<< HEAD
-=======
-const glob = require('glob');
-// import { generateHTMLPage } from "./src/modules/calc";
->>>>>>> 3a7de440a38cb444ff2c0e88d26163b5b1ed3f81
+
+
+
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
@@ -93,11 +91,7 @@ module.exports = {
         },
       },
       {
-<<<<<<< HEAD
-        test: /\.(ttf)$/i,
-=======
         test: /\.ttf$/i,
->>>>>>> 3a7de440a38cb444ff2c0e88d26163b5b1ed3f81
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name][ext]',
