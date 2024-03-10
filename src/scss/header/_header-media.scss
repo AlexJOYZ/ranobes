@@ -1,0 +1,165 @@
+@import '../vars';
+@import './vars.header';
+
+@media (max-width: $breakpoint_xxl) {
+  .header {
+    width: calc($widthHeader - 20px);
+    .btn__menu {
+      width: calc($widthHeader - 20px);
+      height: calc($widthHeader - 20px);
+    }
+    .svg__logo {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+    .login__btn:hover {
+      .icon-login_m {
+        fill: #171717;
+        stroke: #171717;
+      }
+    }
+    .icon-login {
+      display: none;
+    }
+    .icon-login_m {
+      display: block;
+    }
+    .btn__close {
+      width: 26px;
+      height: 26px;
+    }
+    .drop__panel {
+      margin-left: calc($widthHeader - 20px) !important;
+      top: calc($widthHeader - 20px) !important;
+      max-width: 240px;
+    }
+    .btn__burger {
+      width: 26px;
+      height: 26px;
+      padding: 17px;
+    }
+    .burger {
+      width: 26px;
+      height: 26px;
+    }
+    .burger__line:before {
+      top: -7px;
+    }
+    .burger__line:after {
+      top: 7px;
+    }
+    .themes__pop-up {
+      left: calc($widthHeader - 20px) !important;
+    }
+    .icon-skin_ {
+      display: none;
+    }
+    .icon-skin_m {
+      display: block !important;
+    }
+    .header__upper {
+      width: calc($widthHeader - 20px);
+      height: calc($widthHeader - 20px);
+    }
+    .header__upper svg {
+      height: calc($widthHeader - 20px);
+      fill: $colorHeaderIcons;
+    }
+  }
+  .menu {
+    margin-left: calc($widthHeader - 20px);
+    input {
+      height: 60px !important;
+      padding: 18px 68px 18px 25px !important;
+    }
+  }
+  .menu.modify {
+    max-height: calc(100% - 10px);
+  }
+}
+@media (max-width: $breakpoint_md) {
+  .menu.modify {
+    max-height: 100%;
+  }
+}
+@media (max-width: $breakpoint_sm) {
+  .header {
+    border-radius: 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    height: 60px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    .header__top {
+      width: 100%;
+      display: flex;
+      .btn__menu {
+        box-shadow: none;
+      }
+      .drop__panel {
+        margin-left: 0 !important;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        padding: 20px;
+        background: #474747;
+        min-width: calc(100% - 40px) !important;
+        box-shadow: none;
+      }
+      .btn__burger {
+        position: absolute;
+        right: 0;
+        z-index: 10000;
+      }
+      .open__theme {
+        .themes__pop-up {
+          transform: translate(0, 30%) scale(1) !important;
+        }
+      }
+      .header__themes {
+      }
+      .themes__pop-up {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: calc($widthHeader - 30px);
+        left: calc(($widthHeader - 20px) * 2) !important;
+        transform: translate(0, -50%) scale(0.7) !important;
+        li{
+          &:first-child,&:last-child{
+            margin-top: -35px;
+            z-index: 10000;
+
+          }
+          margin-left: 0;
+        }
+      }
+    }
+    .header__upper {
+      display: none;
+    }
+  }
+  .header:before {
+    content: '';
+    min-width: 100%;
+    top: 60px;
+    position: absolute;
+    z-index: 99999;
+    height: 8px;
+    background-image: -webkit-linear-gradient(
+      bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.14) 100%
+    );
+  }
+  .menu {
+    margin-left: 0;
+    z-index: 900;
+    position: fixed;
+    top: calc($widthHeader - 20px);
+    box-shadow: none;
+    min-width: 100% !important;
+  }
+}

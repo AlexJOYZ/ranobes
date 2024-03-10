@@ -1,0 +1,71 @@
+@import '../vars';
+
+@media (max-width: $breakpoint_xxl) {
+  .novel {
+    margin-bottom: 30px;
+  }
+  .novel__img {
+    margin-right: 25px !important;
+  }
+  .new__chapters,
+  .novel-small {
+    .title__novel {
+      font-size: 12px;
+    }
+    .novel__img {
+      width: 44px;
+      height: 44px;
+    }
+    img {
+      width: 44px;
+      height: 44px;
+    }
+    .animation_1 {
+      width: 34px;
+      height: 34px;
+    }
+    .animation_2 {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
+@media (max-width: $breakpoint_sm) {
+  .novel {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    // padding: 20px;
+    border-bottom: 1px solid #3b3b3b;
+    background: linear-gradient(180deg, #474747 calc(100% - 40px), #444444 100%);
+    .novel__img {
+      width: 90px !important;
+      height: 120px !important;
+    }
+    
+  }
+  .novel__img {
+    margin-right: 15px !important;
+  }
+  .new__chapters,
+  .novel-small {
+    .title__novel {
+      font-size: 12px;
+    }
+    .novel__img {
+      width: 44px;
+      height: 44px;
+    }
+    img {
+      width: 44px;
+      height: 44px;
+    }
+    .animation_1 {
+      width: 34px;
+      height: 34px;
+    }
+    .animation_2 {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}
