@@ -1,6 +1,8 @@
-@import './header/style.header';
 @import './NewNovels/style.newnovels';
+@import './aside/style.aside';
 @import './fonts';
+@import './header/style.header';
+@import './vars';
 
 * {
   margin: 0;
@@ -21,22 +23,65 @@ body {
     max-width: 1320px;
     margin: 0 auto;
     padding: 30px;
+    overflow: hidden;
   }
   .body {
     background-color: $backColour;
     box-shadow:
       0 2px 6px 0 rgba(0, 0, 0, 0.11),
       0 0 35px 0 rgba(0, 0, 0, 0.06);
-    border-radius: $sizeRadiusContainer;
+    border-radius: $sizeRadiusBody;
     position: relative;
-    
   }
-  .container {
+  .fixed {
+    position: fixed !important;
+    top: 0;
+    transition: all 0.4s ease-in;
+  }
+
+  input {
+    outline: none;
+    font-size: 14px;
+  }
+  [type='search']::-webkit-search-cancel-button,
+  [type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  input::placeholder {
+    font-size: 14px;
+    font-family: 'GothamPro-Light';
+    font-weight: 600;
+    color: #b7b7b7;
+  }
+  main {
+    border-left: solid #3b3b3b 1px;
     display: flex;
+    margin-left: $widthHeader;
   }
   .content {
     width: 67.74%;
     border-right: 1px solid #3b3b3b;
+  }
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    border-left: 1px solid #3b3b3b;
+    margin-left: 80px;
+    padding: 30px 50px;
+    background-color: #474747;
+    border-top: 1px solid #3b3b3b;
+    border-radius: 0px 0px 8px 0px;
+    font-size: 12px;
+    color: #999;
+    span {
+      font-family: 'GothamPro-Black';
+      font-weight: 700;
+    }
+    a:hover {
+      color: #212121;
+      text-decoration: underline;
+    }
   }
   .btn {
     font-family: 'GothamPro-Bold';
@@ -47,7 +92,6 @@ body {
     background-image: -webkit-linear-gradient(top, #626262 0%, #626262 100%);
     background-color: #626262;
     text-align: center;
-    color: #efefef;
   }
   .btn:hover {
     background-color: #5d5c5c;
@@ -59,4 +103,44 @@ body {
     padding: 0 35px;
   }
 }
-
+@media (max-width: $breakpoint_xxl) {
+  .page {
+    padding: 10px !important;
+  }
+  main {
+    margin-left: calc($widthHeader - 20px) !important;
+  }
+  .footer {
+    margin-left: calc($widthHeader - 20px) !important;
+    padding: 30px 30px !important;
+  }
+  .block {
+    margin: 30px 0 !important;
+    padding: 0 30px !important;
+  }
+}
+@media (max-width: $breakpoint_l) {
+  .content {
+    width: 100% !important;
+  }
+}
+@media (max-width: $breakpoint_md) {
+  .page {
+    padding: 0 !important;
+  }
+}
+@media (max-width: $breakpoint_sm) {
+  main {
+    border-left: none !important;
+    display: flex !important;
+    margin-left: 0 !important;
+  }
+  .block {
+    margin: 0 !important;
+    padding: 20px !important;
+  }
+  .footer {
+    margin-left: 0 !important;
+    padding: 20px !important;
+  }
+}

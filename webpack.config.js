@@ -2,9 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-
-
-
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
 const target = devMode ? 'web' : 'browserslist';
@@ -60,7 +57,8 @@ module.exports = {
       {
         test: /\.(c|sa|sc)ss$/i,
         use: [
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          // devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -90,6 +88,13 @@ module.exports = {
           },
         },
       },
+      // {
+      //   test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
+      //   loader: 'url-loader',
+      //   options: {
+      //     limit: 100000,
+      //   },
+      // },
       {
         test: /\.ttf$/i,
         type: 'asset/resource',
