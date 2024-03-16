@@ -3,4 +3,5 @@ import '../pages/main.html';
 import '../scss/index.scss';
 import './header'
 import './aside'
+import './newnovels'
 

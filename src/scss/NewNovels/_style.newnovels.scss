@@ -1,14 +1,14 @@
 @import './vars.newnovels';
 @import '../header/vars.header';
 
-
 .novel {
   margin-bottom: 50px;
+  position: relative;
 }
 .novel__info {
+  margin-bottom: 35px;
   display: flex;
   align-items: center;
-  margin-bottom: 35px;
   .novel__img {
     width: 140px;
     height: 175px;
@@ -37,6 +37,19 @@
   .novel__description {
     color: #bdbdbd;
     margin-bottom: 15px;
+    a {
+      margin-top: 5px;
+      display: none;
+      text-transform: uppercase;
+      color: #95ac7c;
+      font-family: 'GothamPro-Bold';
+      font-weight: 800;
+      transition: color .3s;
+      font-size: 12px;
+      &:hover {
+        color: #828282;
+      }
+    }
   }
   .novel__rate-date {
     display: flex;
@@ -179,7 +192,7 @@
     position: relative;
     width: 64px;
     height: 64px;
-    margin-right: 1rem!important;
+    margin-right: 1rem !important;
   }
   img {
     border-radius: 50%;
@@ -219,7 +232,6 @@
     opacity: 0.8;
     overflow: hidden;
     text-overflow: ellipsis;
-
   }
   .title__novel {
     text-overflow: ellipsis;
@@ -252,7 +264,7 @@
   .animation_2 {
     opacity: 1;
     visibility: visible;
-    transform: translate(-50%,-50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 .block-updates {

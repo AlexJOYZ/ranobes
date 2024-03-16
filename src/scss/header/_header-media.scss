@@ -89,7 +89,7 @@
     left: 0;
     top: 0;
     right: 0;
-    min-width: 100%;
+    min-width: 100vw;
     height: 60px;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
     .header__top {
@@ -110,6 +110,7 @@
       }
       .btn__burger {
         position: absolute;
+        background-color: transparent;
         right: 0;
         z-index: 10000;
       }
@@ -118,8 +119,7 @@
           transform: translate(0, 30%) scale(1) !important;
         }
       }
-      .header__themes {
-      }
+      
       .themes__pop-up {
         display: flex;
         align-items: center;
@@ -131,9 +131,14 @@
           &:first-child,&:last-child{
             margin-top: -35px;
             z-index: 10000;
-
+            position: relative;
           }
           margin-left: 0;
+        }
+      }
+      menu{
+        input{
+          padding-left: 20px;
         }
       }
     }

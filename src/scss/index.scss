@@ -34,7 +34,7 @@ body {
     position: relative;
   }
   .fixed {
-    position: fixed!important;
+    position: fixed !important;
     top: 0;
     transition: all 0.4s ease-in;
   }
@@ -130,14 +130,17 @@ body {
   }
 }
 @media (max-width: $breakpoint_sm) {
-  
   main {
     border-left: none !important;
     display: flex !important;
     margin-left: 0 !important;
   }
+  .block {
+    margin: 0 !important;
+    padding: 20px !important;
+  }
   .footer {
     margin-left: 0 !important;
-    padding: 30px 30px !important;
+    padding: 20px !important;
   }
 }
