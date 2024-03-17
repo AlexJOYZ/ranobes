@@ -3,7 +3,6 @@
 @media (max-width: $breakpoint_xxl) {
   .novel {
     margin-bottom: 30px;
-    
   }
   .novel__img {
     margin-right: 25px !important;
@@ -108,28 +107,9 @@
   .new__chapters,
   .novel-small {
     .new__chapter {
-      padding-top: 0px!important;
-      padding-bottom: 0px!important;
+      padding-top: 0px !important;
+      padding-bottom: 0px !important;
       margin: 20px 0 !important;
-    }
-    .title__novel {
-      font-size: 12px;
-    }
-    .novel__img {
-      width: 44px;
-      height: 44px;
-    }
-    img {
-      width: 44px;
-      height: 44px;
-    }
-    .animation_1 {
-      width: 34px;
-      height: 34px;
-    }
-    .animation_2 {
-      width: 14px;
-      height: 14px;
     }
   }
 }
