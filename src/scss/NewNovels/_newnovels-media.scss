@@ -4,8 +4,8 @@
   .novel {
     margin-bottom: 30px;
   }
-  .novel__img {
-    margin-right: 25px !important;
+  .novel__info .novel__img {
+    margin-right: 25px;
   }
   .new__chapters,
   .novel-small {
@@ -40,6 +40,12 @@
       display: none;
     }
     .novel__info {
+      .novel__img {
+        width: 90px;
+        height: 120px;
+        position: absolute;
+        top: 25%;
+      }
       .novel__text {
         display: flex;
         flex-direction: column;
@@ -91,18 +97,10 @@
         }
       }
     }
-    .novel__img {
-      width: 90px !important;
-      height: 120px !important;
-      position: absolute;
-      top: 25%;
-    }
+
     .novel__tools {
       margin: 0 20px;
     }
-  }
-  .novel__img {
-    margin-right: 15px !important;
   }
   .new__chapters,
   .novel-small {

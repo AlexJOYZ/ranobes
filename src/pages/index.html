@@ -82,12 +82,46 @@
                 <svg class="icon m_ico icon-login_m">
                   <use xlink:href="#icon-login_m"></use>
                 </svg>
+                <img class="user-avatar" src="../img/avatar.jpg" alt="avatar" />
+                <img class="admin-avatar" src="../img/admin.jpg" alt="avatar" />
                 <span class="btn__close">
                   <i class="line1"></i>
                   <i class="line2"></i>
                 </span>
               </a>
-              <form class="drop__panel">
+              <div class="login-panel drop__panel">
+                <a href="#" class="login-avatar">
+                  <img src="../img/avatar.jpg" alt="avatar" class="avatar" />
+                  <img src="../img/admin.jpg" alt="avatar" class="admin-img" />
+                </a>
+                <div class="login-name">
+                  <a href="#" class="login-title"></a>
+                </div>
+                <div class="login-menu">
+                  <a href="#" class="link-login"
+                    ><i class="fas fa-inbox"></i>Messages
+                    <span class="count-messages"
+                      ><b>0</b> of <span class="count-message">0</span></span
+                    ></a
+                  >
+                  <a href="./bookmarks.html" class="link-login"
+                    ><i class="fas fa-thumbtack"></i>Bookmarks
+                    <span class="span-login count-bookmarks">0</span></a
+                  >
+                  <a href="#" class="link-login"
+                    ><i class="fas fa-bell"></i>Subscriptions
+                    <span class="span-login count-subscriptions">0</span></a
+                  >
+                  <a href="#" class="link-login"><i class="fas fa-comment-dots"></i>Comments</a>
+                  <a href="#" class="link-login"
+                    ><i class="fas fa-history"></i>Last viewed chapters</a
+                  >
+                </div>
+                <div class="logout">
+                  <a href="#" class="btn-logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </div>
+              </div>
+              <form class="drop__panel unauth">
                 <div class="social__links">
                   <a href="#" class="social__yandex"
                     ><i class="fa-brands fa-yandex-international"></i
@@ -99,13 +133,13 @@
                   </a>
                 </div>
                 <label for="login">Login:</label>
-                <input type="text" class="login" placeholder="Login:" />
+                <input type="text" class="login" name="login" placeholder="Login:" />
                 <label for="login">Password</label>
-                <input type="password" class="password" placeholder="Password" />
-                <a href="" class="btn">sign in</a>
+                <input type="password" class="password" name="password" placeholder="Password" />
+                <button type="submit" class="btn">sign in</button>
                 <div class="form__footer">
                   <a href="" class="lost__password">Forgot password?</a>
-                  <a href="" class="sign__up">Sign up</a>
+                  <a href="./registration/rules.html" class="sign__up">Sign up</a>
                 </div>
               </form>
             </div>
@@ -181,6 +215,10 @@
                       <use xlink:href="#icon-search"></use>
                     </svg>
                   </a>
+                  <div class="search-result">
+                    <div class="result-inner"></div>
+                    <a href="#" class="btn-search">More results</a>
+                  </div>
                 </form>
                 <nav class="nav">
                   <a href="" class="active nav__link"> <i class="fas fa-home"></i>Home</a>
@@ -188,7 +226,7 @@
                   <a href="" class="nav__link"><i class="fas fa-sync"></i>Updates</a>
                   <a href="" class="nav__link"><i class="fas fa-fire"></i>Popular</a>
                   <div class="nav__border"></div>
-                  <a href="./tags/genre.html" class="nav__link"><i class="fas fa-list"></i>Genre catalog</a>
+                  <a href="" class="nav__link"><i class="fas fa-list"></i>Genre catalog</a>
                   <a href="" class="nav__link"
                     ><i class="fas fa-clipboard-check"></i>Completed novels</a
                   >
@@ -198,8 +236,10 @@
                   >
                   <div class="nav__border"></div>
                   <a href="" class="nav__link"><i class="fas fa-search"></i>Local search engine</a>
-                  <a href="" class="nav__link"><i class="fas fa-envelope"></i>Contacts</a>
-                  <a href="" class="nav__link"><i class="fas fa-receipt"></i>Rules</a>
+                  <a href="./contacts.html" class="nav__link"
+                    ><i class="fas fa-envelope"></i>Contacts</a
+                  >
+                  <a href="./rules.html" class="nav__link"><i class="fas fa-receipt"></i>Rules</a>
                 </nav>
               </div>
             </menu>
@@ -215,303 +255,15 @@
 
         <main>
           <div class="content">
-            <div class="new__novels">
-              <article class="novel">
-                <div class="novel__info block">
-                  <a href="./main.html"
-                    ><img src="../img/re-monarch.webp" alt="Novel cover" class="novel__img"
-                  /></a>
-                  <div class="novel__text">
-                    <h2 class="novel__title">
-                      <a href="./main.html" class="novel__link">RE: Monarch</a>
-                    </h2>
-                    <p class="novel__tags">
-                      Action, Fantasy, Adventure, Mature, Mystery, Psychological, Supernatural,
-                      Martial Arts
-                    </p>
-                    <div class="novel__description">
-                      <p>
-                        Cairn is a prince who is already tired of ruling. Faced with an imminent
-                        coronation and an overbearing father, he wants nothing more than to drown
-                        his responsibilities in cheap liquor and poor decisions. With the help of
-                        his sister, he hatches a plan to escape the clutches of the throne once
-                        and...
-                      </p>
-                      <a href="./main.html" class="description-more">Read more</a>
-                    </div>
-                    <div class="novel__rate-date">
-                      <div class="unit__rating">
-                        <div class="current__rating">
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                        </div>
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                      </div>
-                      <a href="./main.html" class="upload__date">
-                        • UP: <span class="up__date">29 days ago</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="border"></div>
-                <div class="novel__tools">
-                  <a href="./main.html" class="btn btn-read">◃ Read ▹</a>
-                  <a href="./main.html" class="btn-bookmark">
-                    <div class="bookmark">
-                      <img src="../img/bookmark-icon.svg" alt="bookmark" />
-                      <p class="bookmark__title">Bookmark</p>
-                    </div>
-                  </a>
-                </div>
-              </article>
-              <article class="novel">
-                <div class="novel__info block">
-                  <a href="./main.html"
-                    ><img
-                      src="../img/the-extra-of-the-lunerra.webp"
-                      alt="Novel cover"
-                      class="novel__img"
-                  /></a>
-                  <div class="novel__text">
-                    <h2 class="novel__title">
-                      <a href="./main.html" class="novel__link">The Extra of The Lunerra</a>
-                    </h2>
-                    <p class="novel__tags">Fantasy, Action, Tragedy, Adventure, Romance, Game</p>
-                    <div class="novel__description">
-                      <p>
-                        The only game in my life that makes me laugh: The Lands of The Lunerra… I
-                        played this game for six thousand hours in three years, and the day I
-                        thought I had done everything I could in this game, I felt a great emptiness
-                        inside me. I thought nothing in my ordinary and monotonous life could make
-                        me...
-                      </p>
-                      <a href="./main.html" class="description-more">Read more</a>
-                    </div>
-                    <div class="novel__rate-date">
-                      <div class="unit__rating">
-                        <div class="current__rating">
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                        </div>
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                      </div>
-                      <a href="./main.html" class="upload__date">
-                        • UP: <span class="up__date">7 days ago</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="border"></div>
-                <div class="novel__tools">
-                  <a href="./main.html" class="btn btn-read">◃ Read ▹</a>
-                  <a href="./main.html" class="btn-bookmark">
-                    <div class="bookmark">
-                      <img src="../img/bookmark-icon.svg" alt="bookmark" />
-                      <p class="bookmark__title">Bookmark</p>
-                    </div>
-                  </a>
-                </div>
-              </article>
-              <article class="novel">
-                <div class="novel__info block">
-                  <a href="./main.html"
-                    ><img src="../img/cultist-of-cerebon.webp" alt="Novel cover" class="novel__img"
-                  /></a>
-                  <div class="novel__text">
-                    <h2 class="novel__title">
-                      <a href="./main.html" class="novel__link">Cultist of Cerebon</a>
-                    </h2>
-                    <p class="novel__tags">Action, Drama, Fantasy, Adventure</p>
-                    <div class="novel__description">
-                      <p>
-                        When Zareth first realized he had been reborn into a world that seemed to
-                        run on video game mechanics, he was ecstatic. He’d expected to go on to live
-                        an exciting life filled with danger and adventure. Instead, Zareth spent
-                        much of his new life living on the streets of Tal’Qamar before eventually...
-                      </p>
-                      <a href="./main.html" class="description-more">Read more</a>
-
-                    </div>
-                    <div class="novel__rate-date">
-                      <div class="unit__rating">
-                        <div class="current__rating">
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                          <img src="../img/stars-rate-current.svg" alt="" />
-                        </div>
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                        <img src="../img/stars-rate.svg" alt="star" />
-                      </div>
-                      <a href="./main.html" class="upload__date">
-                        • UP: <span class="up__date">1 day ago</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div class="border"></div>
-                <div class="novel__tools">
-                  <a href="./main.html" class="btn btn-read">◃ Read ▹</a>
-                  <a href="./main.html" class="btn-bookmark">
-                    <div class="bookmark">
-                      <img src="../img/bookmark-icon.svg" alt="bookmark" />
-                      <p class="bookmark__title">Bookmark</p>
-                    </div>
-                  </a>
-                </div>
-              </article>
-            </div>
+            <div class="notifications"></div>
+            <div class="new__novels"></div>
             <div class="new__chapters">
-              <div class="title__new__chapters block">
-                <h2 class="midtitle__new__chapters"><span>UPDATE TAPE</span></h2>
+              <div class="title-stripes block">
+                <h2 class="midtitle-stripes"><span>UPDATE TAPE</span></h2>
               </div>
-              <a href="#" class="new__chapter block">
-                <div class="novel__img">
-                  <img src="../img/i-become-a-mafia-in-the-academy.jpg" alt="novel image" />
-                  <div class="animation_1"></div>
-                  <div class="animation_2"></div>
-                </div>
-                <div class="info">
-                  <h3 class="title__novel">I Become a Mafia in the Academy</h3>
-                  <h3 class="sub__title">Charter <span>180:</span></h3>
-                  <em>19 minutes ago</em>
-                </div>
-              </a>
-
-              <a href="#" class="new__chapter block">
-                <div class="novel__img">
-                  <img src="../img/thunder-gods-reincarnation.jpg" alt="novel image" />
-                  <div class="animation_1"></div>
-                  <div class="animation_2"></div>
-                </div>
-                <div class="info">
-                  <h3 class="title__novel">Thunder God's Reincarnation</h3>
-                  <h3 class="sub__title">Charter <span>216</span></h3>
-                  <em>30 minutes ago</em>
-                </div>
-              </a>
-              <a href="#" class="new__chapter block">
-                <div class="novel__img">
-                  <img src="../img/i-can-extract-everything.jpg" alt="novel image" />
-                  <div class="animation_1"></div>
-                  <div class="animation_2"></div>
-                </div>
-                <div class="info">
-                  <h3 class="title__novel">Supreme Lord: I can extract everything!</h3>
-                  <h3 class="sub__title">Charter <span>559: Complaints</span></h3>
-                  <em>1 hour ago</em>
-                </div>
-              </a>
-              <a href="#" class="new__chapter block">
-                <div class="novel__img">
-                  <img src="../img/martial-peak.jpg" alt="novel image" />
-                  <div class="animation_1"></div>
-                  <div class="animation_2"></div>
-                </div>
-                <div class="info">
-                  <h3 class="title__novel">Martial Peak</h3>
-                  <h3 class="sub__title">Charter <span>5468: Black Ink Disciples’ Goal</span></h3>
-                  <em>1 hour ago</em>
-                </div>
-              </a>
-              <a href="#" class="new__chapter block">
-                <div class="novel__img">
-                  <img src="../img/circle-of-inevitability.jpg" alt="novel image" />
-                  <div class="animation_1"></div>
-                  <div class="animation_2"></div>
-                </div>
-
-                <div class="info">
-                  <h3 class="title__novel">Circle of Inevitability</h3>
-                  <h3 class="sub__title">Charter <span>585: Repeated “Betrayal”</span></h3>
-                  <em>1 hour ago</em>
-                </div>
-              </a>
-              <a href="#" class="new__chapter block">
-                <div class="novel__img">
-                  <img src="../img/the-celestial-returned-from-hell.jpg" alt="novel image" />
-                  <div class="animation_1"></div>
-                  <div class="animation_2"></div>
-                </div>
-                <div class="info">
-                  <h3 class="title__novel">The Celestial Returned From Hell</h3>
-                  <h3 class="sub__title">Charter <span>347</span></h3>
-                  <em>2 hours ago</em>
-                </div>
-              </a>
-              <a href="#" class="new__chapter block">
-                <div class="novel__img">
-                  <img src="../img/stranger-danger.webp" alt="novel image" />
-                  <div class="animation_1"></div>
-                  <div class="animation_2"></div>
-                </div>
-                <div class="info">
-                  <h3 class="title__novel">Stranger Danger</h3>
-                  <h3 class="sub__title">
-                    Charter <span>290: The Incense of Fortune Can’t Be Lit!?</span>
-                  </h3>
-                  <em>2 hours ago</em>
-                </div>
-              </a>
-              <a href="#" class="new__chapter block">
-                <div class="novel__img">
-                  <img src="../img/supremacy-games.jpg" alt="novel image" />
-                  <div class="animation_1"></div>
-                  <div class="animation_2"></div>
-                </div>
-                <div class="info">
-                  <h3 class="title__novel">Supremacy Games</h3>
-                  <h3 class="sub__title">
-                    Charter <span>1647: Stealing The Celestial Energy! II</span>
-                  </h3>
-                  <em>2 hours ago</em>
-                </div>
-              </a>
-              <a href="#" class="new__chapter block">
-                <div class="novel__img">
-                  <img src="../img/the-supreme-magus.jpg" alt="novel image" />
-                  <div class="animation_1"></div>
-                  <div class="animation_2"></div>
-                </div>
-                <div class="info">
-                  <h3 class="title__novel">Supreme Magus</h3>
-                  <h3 class="sub__title">Charter <span>2908: The Outsider (part 2)</span></h3>
-                  <em>3 hours ago</em>
-                </div>
-              </a>
-              <a href="#" class="new__chapter block">
-                <div class="novel__img">
-                  <img src="../img/ultragene-warlord.jpg" alt="novel image" />
-                  <div class="animation_1"></div>
-                  <div class="animation_2"></div>
-                </div>
-                <div class="info">
-                  <h3 class="title__novel">Ultragene Warlord</h3>
-                  <h3 class="sub__title">Charter <span>1293: Goodbye, Third Realm</span></h3>
-                  <em>3 hours ago</em>
-                </div>
-              </a>
-              <div class="block block-updates">
-                <a href="#" class="btn btn-updates">More updates</a>
-              </div>
+            </div>
+            <div class="block block-updates">
+              <a href="#" class="btn btn-updates">More updates</a>
             </div>
           </div>
           <aside>
@@ -521,263 +273,8 @@
                 <a class="btn-discussed">Most Discussed</a>
               </div>
               <div class="aside__top-content">
-                <div class="current novels__best tabs">
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/lotmcover.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Lord of the Mysteries</h3>
-                      <h3 class="sub__title">Cuttlefish That Loves Diving</h3>
-                      <em>Rating: 4.7 / 5 from 769 ratings</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/the-legendary-mechanic.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">The Legendary Mechanic</h3>
-                      <h3 class="sub__title">Chocolion</h3>
-                      <em>Rating: 4.6 / 5 from 707 ratings</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/cultivation-online.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Cultivation Online</h3>
-                      <h3 class="sub__title">MyLittleBrother</h3>
-                      <em>Rating: 3.9 / 5 from 743 ratings</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img
-                        src="../img/my-three-wives-are-beautiful-vampires.jpg"
-                        alt="novel image"
-                      />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">My Three Wives Are Beautiful Vampires</h3>
-                      <h3 class="sub__title">Victor_Weismann</h3>
-                      <em>Rating: 4.2 / 5 from 620 ratings</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/talqpfty.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-
-                    <div class="info">
-                      <h3 class="title__novel">
-                        Top Tier Providence, Secretly Cultivate for a Thousand Years
-                      </h3>
-                      <h3 class="sub__title">Ren Wo Xiao</h3>
-                      <em>Rating: 4.4 / 5 from 550 ratings</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/supremacy-games.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Supremacy Games</h3>
-                      <h3 class="sub__title">MidGard</h3>
-                      <em>Rating: 4.3 / 5 from 525 ratings</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/shadow-slave.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Shadow Slave</h3>
-                      <h3 class="sub__title">Guiltythree</h3>
-                      <em>Rating: 3.9 / 5 from 514 ratings</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/circle-of-inevitability.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Circle of Inevitability</h3>
-                      <h3 class="sub__title">Cuttlefish That Loves Diving</h3>
-                      <em>Rating: 4.7 / 5 from 420 ratings</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/the-authors-pov.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">The Author's POV</h3>
-                      <h3 class="sub__title">Entrail_JI</h3>
-                      <em>Rating: 4.2 / 5 from 452 ratings</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/reverend-insanity.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Reverend Insanity</h3>
-                      <h3 class="sub__title">Gu Zhen Ren</h3>
-                      <em>Rating: 4.5 / 5 from 365 ratings</em>
-                    </div>
-                  </a>
-                </div>
-                <div class="tabs novels__discussed">
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/blood-warlock.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">
-                        Blood Warlock: Succubus Partner in the Apocalypse
-                      </h3>
-                      <h3 class="sub__title">English; 2021 year; ≈1400+ chapters</h3>
-                      <em>1 015 comments</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/lotmcover.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Lord of the Mysteries</h3>
-                      <h3 class="sub__title">Chinese; 2018 year; ≈1430 chapters</h3>
-                      <em>965 comments</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/the-authors-pov.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">The Author's POV</h3>
-                      <h3 class="sub__title">English; 2021 year; ≈865 chapters</h3>
-                      <em>944 comments</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/supremacy-games.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Supremacy Games</h3>
-                      <h3 class="sub__title">English; 2020 year; ≈1500+ chapters</h3>
-                      <em>789 comments</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/infinite-mana.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Infinite Mana in the Apocalypse</h3>
-                      <h3 class="sub__title">English; 2020 year; ≈2500+ chapters</h3>
-                      <em>762 comments</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/talqpfty.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">
-                        Top Tier Providence, Secretly Cultivate for a Thousand Years
-                      </h3>
-                      <h3 class="sub__title">Chinese; 2021 year; ≈1192 chapters</h3>
-                      <em>751 comments</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/cultivation-online.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Cultivation Online</h3>
-                      <h3 class="sub__title">English; 2020 year; ≈1300+ chapters</h3>
-                      <em>707 comments</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/shadow-slave.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Shadow Slave</h3>
-                      <h3 class="sub__title">English; 2022 year; ≈1500+ chapters</h3>
-                      <em>702 comments</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img src="../img/circle-of-inevitability.jpg" alt="novel image" />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Circle of Inevitability</h3>
-                      <h3 class="sub__title">Chinese; 2023 year; ≈600+ chapters</h3>
-                      <em>666 comments</em>
-                    </div>
-                  </a>
-                  <a href="#" class="novel-small">
-                    <div class="novel__img">
-                      <img
-                        src="../img/reincarnated-with-the-strongest-system.jpg"
-                        alt="novel image"
-                      />
-                      <div class="animation_1"></div>
-                      <div class="animation_2"></div>
-                    </div>
-                    <div class="info">
-                      <h3 class="title__novel">Reincarnated With The Strongest System</h3>
-                      <h3 class="sub__title">English; 2021 year; ≈1474 chapters</h3>
-                      <em>625 comments</em>
-                    </div>
-                  </a>
-                </div>
+                <div class="current novels__best tabs"></div>
+                <div class="tabs novels__discussed"></div>
               </div>
             </div>
           </aside>

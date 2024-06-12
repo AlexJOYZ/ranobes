@@ -1,0 +1,51 @@
+@import '../vars';
+
+.authorized {
+  .icon-login,
+  .icon-login_m {
+    display: none;
+  }
+  .user-avatar {
+    display: block;
+  }
+  .admin {
+    .user-avatar {
+      display: none;
+    }
+    .admin-avatar {
+      display: block;
+    }
+    .login-panel .admin-img {
+      display: block;
+    }
+    .avatar {
+      display: none;
+    }
+  }
+  .header .login-panel {
+    display: block ;
+    .admin-img {
+      display: none;
+    }
+  }
+  .unauth {
+    display: none;
+  }
+}
+@media (max-width: $breakpoint_xxl) {
+  .authorized {
+    .user-avatar {
+      width: 26px;
+      height: 26px;
+    }
+    .admin {
+      .user-avatar {
+        display: none;
+      }
+      .admin-avatar {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}
