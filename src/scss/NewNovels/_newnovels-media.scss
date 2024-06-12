@@ -3,10 +3,9 @@
 @media (max-width: $breakpoint_xxl) {
   .novel {
     margin-bottom: 30px;
-    
   }
-  .novel__img {
-    margin-right: 25px !important;
+  .novel__info .novel__img {
+    margin-right: 25px;
   }
   .new__chapters,
   .novel-small {
@@ -41,6 +40,12 @@
       display: none;
     }
     .novel__info {
+      .novel__img {
+        width: 90px;
+        height: 120px;
+        position: absolute;
+        top: 25%;
+      }
       .novel__text {
         display: flex;
         flex-direction: column;
@@ -92,44 +97,17 @@
         }
       }
     }
-    .novel__img {
-      width: 90px !important;
-      height: 120px !important;
-      position: absolute;
-      top: 25%;
-    }
+
     .novel__tools {
       margin: 0 20px;
     }
   }
-  .novel__img {
-    margin-right: 15px !important;
-  }
   .new__chapters,
   .novel-small {
     .new__chapter {
-      padding-top: 0px!important;
-      padding-bottom: 0px!important;
-      margin: 20px 0 !important;
-    }
-    .title__novel {
-      font-size: 12px;
-    }
-    .novel__img {
-      width: 44px;
-      height: 44px;
-    }
-    img {
-      width: 44px;
-      height: 44px;
-    }
-    .animation_1 {
-      width: 34px;
-      height: 34px;
-    }
-    .animation_2 {
-      width: 14px;
-      height: 14px;
+      padding-top: 0px ;
+      padding-bottom: 0px ;
+      margin: 20px 0 ;
     }
   }
 }

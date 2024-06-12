@@ -6,7 +6,20 @@ const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
 const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
-const pageNames = ['index.html', 'main.html'];
+const pageNames = [
+  'index.html',
+  'main.html',
+  'tags/genre.html',
+  'tags/catalog.html',
+  'tags/authors.html',
+  'tags/languages.html',
+  'contacts.html',
+  'rules.html',
+  'registration/rules.html',
+  'registration/registration.html',
+  'registration/result.html',
+  'bookmarks.html',
+];
 function getMpa() {
   const htmlwebpackplugins = [];
   pageNames.forEach((pageName) => {
@@ -29,9 +42,11 @@ module.exports = {
   target,
   devtool,
   devServer: {
-    port: 3000,
+    port: 3500,
+    historyApiFallback: true,
     open: true,
     hot: true,
+    compress: true,
   },
   entry: path.resolve(__dirname, 'src', 'js', 'app.js'),
   output: {
@@ -57,7 +72,7 @@ module.exports = {
       {
         test: /\.(c|sa|sc)ss$/i,
         use: [
-          // devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'style-loader',
           'css-loader',
           {
@@ -88,22 +103,16 @@ module.exports = {
           },
         },
       },
-      // {
-      //   test: /\.(png|jpe?g|gif|svg|eot|ttf|woff|woff2)$/i,
-      //   loader: 'url-loader',
-      //   options: {
-      //     limit: 100000,
-      //   },
-      // },
+
       {
-        test: /\.ttf$/i,
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'fonts/[name][ext]',
         },
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg|webp)$/i,
         type: 'asset/resource',
         use: {
           loader: 'image-webpack-loader',
@@ -115,7 +124,7 @@ module.exports = {
               enabled: false,
             },
             pngquant: {
-              quality: [0.65, 0.9],
+              quality: [-20, 1],
               speed: 4,
             },
             gifsicle: {

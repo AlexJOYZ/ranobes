@@ -1,0 +1,56 @@
+@import '../vars';
+
+
+
+.tags-tabs {
+  margin: 35px auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid #3b3b3b;
+  border-radius: 15px;
+  width: fit-content;
+  height: 28px;
+  overflow: hidden;
+  a {
+    &:first-child {
+      border-width: 0;
+    }
+    &:hover {
+      color: #bdbdbd;
+    }
+    font-size: 11px;
+    border-left: 1px solid #3b3b3b;
+    font-family: 'GothamPro-Bold';
+    padding: 8px 12px;
+    color: #999;
+    line-height: 20px;
+    text-align: center;
+    transition: 0.2s color;
+  }
+  .tags-active {
+    color: #ccc;
+    pointer-events: none;
+  }
+}
+
+.tags-aside-title {
+  font-size: 1.2em;
+  font-family: 'GothamPro-Bold';
+  letter-spacing: -0.01em;
+  line-height: 1.35em;
+  margin: 2em 0 0.8em;
+}
+
+
+@media (max-width: $breakpoint_xxl) {
+  .tags-tabs {
+    margin: 30px auto;
+  }
+}
+@media (max-width: $breakpoint_sm) {
+  .tags-tabs {
+    margin: 20px auto;
+  }
+}
+@import './style.genre&languages';
+@import './style.tagsCatalog-authors';

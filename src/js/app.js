@@ -1,7 +1,12 @@
 import '../pages/index.html';
 import '../pages/main.html';
+import '../pages/tags/genre.html';
+import './main/header';
+import './main/aside/aside';
+import './contacts';
+import './registration/registration';
+import './main/main';
 import '../scss/index.scss';
-import './header'
-import './aside'
-import './newnovels'
-
+import './utils/getDataFromDB';
+import './registration/resultRegistration';
+import './authorization/authorization';

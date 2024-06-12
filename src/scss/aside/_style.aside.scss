@@ -1,11 +1,33 @@
-@import './vars.aside';
-@import '../header/vars.header';
 @import '../vars';
 
 aside {
   width: 32.26%;
   background-color: #434343;
   border-radius: 0 $sizeRadiusBody 0 0;
+  .line {
+    border-bottom: 1px solid #3b3b3b;
+  }
+}
+.new-novel {
+  margin-top: 25px;
+  display: block;
+  opacity: 0.7;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 1;
+  }
+  h3 {
+    font-family: 'GothamPro-Bold';
+    letter-spacing: 0.4px;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  p {
+    color: #999;
+    font-size: 12px;
+  }
 }
 .aside__btns {
   display: flex;
@@ -72,14 +94,16 @@ aside {
 }
 @media (max-width: $breakpoint_xl) {
   aside {
-    .title__novel,
-    .sub__title {
-      width: 190px !important;
+    .novel-small {
+      .title__novel,
+      .sub__title {
+        width: 190px;
+      }
     }
   }
 }
 @media (max-width: $breakpoint_l) {
-  aside{
+  aside {
     display: none;
   }
 }

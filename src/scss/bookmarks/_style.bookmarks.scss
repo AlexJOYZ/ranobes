@@ -1,0 +1,369 @@
+@import '../vars';
+// @import "noteIicon"
+
+.bookmarks-inner {
+  .bookmarks-nav {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    a {
+      cursor: pointer;
+      height: 32px;
+      box-sizing: border-box;
+      font-weight: 800;
+      font-family: 'GothamPro-Bold';
+      padding: 5px 11px;
+      display: flex;
+      align-items: center;
+      color: rgba(204, 204, 204, 0.8);
+      line-height: 22px;
+      margin: 8px 8px 0 0;
+      white-space: nowrap;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      transition: all 0.2s ease;
+      &:first-child {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 8px;
+        border-width: 0;
+        &:hover {
+          background-color: #93ab7b;
+          color: #fff;
+        }
+      }
+      &:hover {
+        color: #ccc;
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+      span {
+        margin-left: 4px;
+        font-family: 'GothamPro-Light';
+        font-weight: 600;
+      }
+    }
+    .active {
+      pointer-events: none;
+      border-color: #93ab7b;
+      box-shadow:
+        inset 0 0 6px 0 #93ab7b,
+        0 0 6px 0 #93ab7b;
+      color: rgba(204, 204, 204, 1);
+    }
+  }
+  .bookmarks-tab-content {
+    margin-top: 25px;
+    .bookmark-novel {
+      position: relative;
+      padding: 16px;
+      background-color: #3b3b3b;
+      border-radius: 10px;
+      transition: all 0.2s ease;
+      .novel-top {
+        display: flex;
+        margin-bottom: 16px;
+        .novel-img {
+          width: 68px;
+          height: 68px;
+          object-fit: cover;
+          border-radius: 6px;
+          margin-right: 16px;
+        }
+        .novel-info {
+          .novel-title {
+            font-weight: 800;
+            font-family: 'GothamPro-Bold';
+            display: block;
+            &:hover {
+              color: #93ab7b;
+            }
+          }
+          .novel-sub-title {
+            display: block;
+            color: #999;
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+          .novel-title,
+          .novel-sub-title {
+            max-width: 470px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+          }
+          .novel-tools {
+            display: flex;
+            margin-top: 6px;
+            gap: 20px;
+            color: #999;
+            .novel__rate-date {
+              display: flex;
+              align-items: center;
+              .unit__rating {
+                user-select: none;
+                background-color: transparent;
+                height: 18px;
+                display: flex;
+                position: relative;
+                margin-right: 15px;
+              }
+              .current__rating {
+                position: absolute;
+                height: 100%;
+                z-index: 12;
+                display: flex;
+                overflow: hidden;
+              }
+              .upload__date {
+                background-color: #95ac7c24;
+                border-radius: 16px;
+                font-family: 'GothamPro-Bold';
+                font-size: 11px;
+                font-weight: 800;
+                text-align: center;
+                line-height: 1.1;
+                padding: 3px 6px 3px 3px;
+                color: #95ac7c;
+                text-transform: uppercase;
+              }
+              .upload__date:hover {
+                background-color: #1a1a1a3b;
+                color: #828282;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+            i {
+              margin-right: 8px;
+            }
+            .novel-meta {
+              display: flex;
+              gap: 20px;
+            }
+          }
+        }
+        .bookmark-inner {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background-color: #353535;
+          border-radius: 0 10px 0 10px;
+          z-index: 100;
+        }
+        .bookmark-container {
+          padding: 12px 16px;
+          position: relative;
+          .btn-bookmark {
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+          }
+          .bookmark-popup {
+            display: none;
+            &:before {
+              border-width: 0 6px 7px;
+              left: 45%;
+              border-color: transparent transparent #3b3b3b transparent;
+              content: '';
+              border-style: solid;
+              bottom: 100%;
+              position: absolute;
+            }
+            width: 144px;
+            box-sizing: border-box;
+            font-size: 12px;
+            line-height: 21px;
+            z-index: 9000;
+            position: absolute;
+            top: 38px;
+            left: -2px;
+            text-align: left;
+            background-color: #3b3b3b;
+            padding: 8px 0px 4px;
+            border-radius: 8px;
+            border: 1px solid #353535;
+            box-shadow: 0 8px 32px -10px rgb(0 0 0/30%);
+            .popup-list {
+              color: #fff;
+              user-select: none;
+
+              .popup-item {
+                padding: 2px 12px;
+                cursor: pointer;
+                height: 24px;
+                display: flex;
+                white-space: nowrap;
+                position: relative;
+                box-sizing: border-box;
+                align-items: center;
+                &:hover {
+                  background-color: #383838;
+                }
+                .poup-img {
+                  width: 16px;
+                  height: 16px;
+                  overflow: hidden;
+                  margin-right: 4px;
+                  .poup-img-dote {
+                    scale: 0.5;
+                    top: -40px;
+                    left: -8px;
+                    position: relative;
+                  }
+                }
+              }
+              .active {
+                color: #94ab7b;
+                .poup-img {
+                  .poup-img-dote {
+                    top: -24px;
+                  }
+                }
+              }
+            }
+          }
+           .active-poup {
+            display: block;
+          }
+        }
+        .btn-bookmark:hover {
+          .bookmark__title {
+            color: #828282;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+        .bookmark {
+          display: flex;
+          align-items: center;
+          img {
+            height: 16px;
+            margin-right: 4px;
+          }
+          .bookmark__title {
+            font-family: 'GothamPro-Bold';
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 1.7;
+            text-transform: uppercase;
+            color: #95ac7c;
+          }
+        }
+        .bookmark-sm {
+          display: none;
+        }
+        .bookmark-line {
+          text-transform: uppercase;
+          z-index: 9;
+          display: flex;
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-size: 10px;
+          color: rgb(#ccc, 0.5);
+          padding-bottom: 6px;
+          height: 32px;
+          line-height: 20px;
+          box-sizing: border-box;
+          width: 100%;
+          align-items: center;
+          padding-top: 7px;
+          padding-bottom: 6px;
+          padding-left: 16px;
+          .line {
+            margin-left: 12px;
+            box-sizing: border-box;
+            width: 100%;
+            height: 1px;
+            opacity: 0.5;
+            background: linear-gradient(90deg, #929292, #94ab7b 100%);
+          }
+        }
+      }
+      .novel-note {
+        img{
+          width: 16px;
+          height: 10px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        position: relative;
+        padding: 9px 14px 8px;
+        background-color: #494949;
+        border-radius: 18px;
+        color: rgb(#ccc, 0.5);
+        font-size: 12px;
+        user-select: none;
+      }
+    }
+    .bookmark-novel + .bookmark-novel {
+      margin-top: 25px;
+    }
+  }
+}
+@media (max-width: $breakpoint_xxl) {
+  .bookmarks-inner .bookmarks-tab-content .bookmark-novel .novel-top .novel-info {
+    .novel-title,
+    .novel-sub-title {
+      max-width: 350px;
+    }
+  }
+}
+@media (max-width: $breakpoint_sm) {
+  .bookmarks-inner {
+    .bookmarks-tab-content .bookmark-novel .novel-top {
+      margin-top: 20px;
+      .novel-info {
+        .novel-title,
+        .novel-sub-title {
+          max-width: 250px;
+        }
+      }
+      .novel-info .novel-tools {
+        .novel__rate-date {
+          margin-bottom: 36px;
+        }
+        .novel-meta {
+          position: absolute;
+          font-size: 12px;
+          left: 0;
+          bottom: 69px;
+          padding-left: 16px;
+        }
+      }
+      .bookmark-container {
+        padding-top: 7px;
+        padding-bottom: 6px;
+        height: 32px;
+        box-sizing: border-box;
+        background: #3b3b3b;
+        border-top-right-radius: 10px;
+      }
+      .bookmark-sm {
+        display: block;
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .bookmarks-inner {
+    .bookmarks-tab-content .bookmark-novel .novel-top {
+      .novel-info {
+        .novel-title,
+        .novel-sub-title {
+          max-width: 150px;
+        }
+        .novel-tools {
+          .novel-meta {
+            bottom: 80px;
+          }
+        }
+      }
+    }
+  }
+}

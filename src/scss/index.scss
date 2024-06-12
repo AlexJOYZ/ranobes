@@ -1,8 +1,5 @@
-@import './NewNovels/style.newnovels';
-@import './aside/style.aside';
-@import './fonts';
-@import './header/style.header';
 @import './vars';
+@import './fonts';
 
 * {
   margin: 0;
@@ -19,6 +16,15 @@ body {
   letter-spacing: 0.012em;
   line-height: 1.5;
   color: #cccccc;
+  &::-webkit-scrollbar {
+    width: .8em
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #606060;
+    border: 2px solid #494949;
+    border-right: 0;
+    border-radius: 15px 0 0 15px
+  }
   .page {
     max-width: 1320px;
     margin: 0 auto;
@@ -34,11 +40,10 @@ body {
     position: relative;
   }
   .fixed {
-    position: fixed !important;
+    position: fixed;
     top: 0;
     transition: all 0.4s ease-in;
   }
-
   input {
     outline: none;
     font-size: 14px;
@@ -48,11 +53,40 @@ body {
     -webkit-appearance: none;
     appearance: none;
   }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border: 1px solid #313131;
+    -webkit-text-fill-color: inherit;
+    -webkit-background-color: #465a7e66;
+  }
+
   input::placeholder {
     font-size: 14px;
     font-family: 'GothamPro-Light';
     font-weight: 600;
     color: #b7b7b7;
+  }
+  .page-title {
+    font-size: 12px;
+    border-bottom: 1px solid #3b3b3b;
+    margin-left: $widthHeader;
+    color: #7d7d7dd6;
+    border-left: 1px solid #3b3b3b;
+    line-height: 22px;
+    padding: 28.5px 35px;
+    a {
+      color: #bdbdbd;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   main {
     border-left: solid #3b3b3b 1px;
@@ -61,7 +95,110 @@ body {
   }
   .content {
     width: 67.74%;
+    min-height: 100vh;
     border-right: 1px solid #3b3b3b;
+    .notifications {
+      position: fixed;
+      display: grid;
+      right: 10px;
+      top: 20px;
+      z-index: 9999999;
+      .notification {
+        transform: translateX(-560px);
+
+        position: relative;
+        max-width: 500px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        gap: 20px;
+        animation: showNotifications 0.5s ease forwards;
+        background-color: #313131;
+        padding: 11px 15px 9px;
+        box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 15px 0 15px 15px;
+        margin-top: 12px;
+        i {
+          &:before {
+            font-size: 1.3em;
+            color: #95ac7c;
+          }
+        }
+        .notification-text {
+          margin-bottom: 10px;
+          opacity: 0.8;
+          h3 {
+            font-size: 13px;
+            margin-bottom: 5px;
+          }
+          p {
+            margin-bottom: 0;
+            font-size: 14px;
+          }
+        }
+        .line-on-time {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          animation: timer 10s linear;
+          height: 3px;
+          background-color: #95ac7c;
+          box-sizing: border-box;
+        }
+        border-radius: 15px 0 15px 15px;
+        a {
+          position: absolute;
+          right: 0;
+          top: 0;
+          cursor: pointer;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    @keyframes showNotifications {
+      0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(530px);
+      }
+      40% {
+        transform: translateX(-5px);
+      }
+      80% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-100px);
+
+        transform: translateX(-10px);
+      }
+    }
+    @keyframes timer {
+      to {
+        width: 0%;
+      }
+    }
+    @keyframes closeNotifications {
+      0% {
+        transform: translateX(-30px);
+      }
+      40% {
+        transform: translateX(30px);
+      }
+      60% {
+        transform: translateX(450px);
+      }
+      100% {
+        transform: translateX(100px);
+
+        opacity: 0;
+        display: none;
+      }
+    }
   }
   .footer {
     display: flex;
@@ -92,6 +229,11 @@ body {
     background-image: -webkit-linear-gradient(top, #626262 0%, #626262 100%);
     background-color: #626262;
     text-align: center;
+    outline: none;
+    border-width: 0;
+    color: inherit;
+    font-size: 14px;
+    cursor: pointer;
   }
   .btn:hover {
     background-color: #5d5c5c;
@@ -104,43 +246,73 @@ body {
   }
 }
 @media (max-width: $breakpoint_xxl) {
-  .page {
-    padding: 10px !important;
-  }
-  main {
-    margin-left: calc($widthHeader - 20px) !important;
-  }
-  .footer {
-    margin-left: calc($widthHeader - 20px) !important;
-    padding: 30px 30px !important;
-  }
-  .block {
-    margin: 30px 0 !important;
-    padding: 0 30px !important;
+  body {
+    .page {
+      padding: 10px;
+    }
+    .page-title {
+      margin-left: calc($widthHeader - 20px);
+      padding: 18.5px 30px;
+    }
+    main {
+      margin-left: calc($widthHeader - 20px);
+    }
+    .footer {
+      margin-left: calc($widthHeader - 20px);
+      padding: 30px 30px;
+    }
+    .block {
+      margin: 30px 0;
+      padding: 0 30px;
+    }
   }
 }
 @media (max-width: $breakpoint_l) {
-  .content {
-    width: 100% !important;
+  body {
+    .content {
+      width: 100%;
+      border-width: 0;
+    }
   }
 }
 @media (max-width: $breakpoint_md) {
-  .page {
-    padding: 0 !important;
+  body {
+    .page {
+      padding: 0;
+    }
   }
 }
 @media (max-width: $breakpoint_sm) {
-  main {
-    border-left: none !important;
-    display: flex !important;
-    margin-left: 0 !important;
-  }
-  .block {
-    margin: 0 !important;
-    padding: 20px !important;
-  }
-  .footer {
-    margin-left: 0 !important;
-    padding: 20px !important;
+  body {
+    .page-title {
+      margin-left: 0;
+      padding: 20px 20px;
+    }
+    main {
+      border-left: none;
+      display: flex;
+      margin-left: 0;
+    }
+    .content {
+      .notification {
+        max-width: 200px;
+      }
+    }
+    .block {
+      margin: 0;
+      padding: 20px;
+    }
+    .footer {
+      margin-left: 0;
+      padding: 20px;
+    }
   }
 }
+@import './NewNovels/style.newnovels';
+@import './aside/style.aside';
+@import './header/style.header';
+@import './tags/style-tags';
+@import './contacts/style.contacts';
+@import './rules/style.rules';
+@import './registration/style.registration';
+@import './bookmarks/style.bookmarks';
