@@ -6,27 +6,14 @@ const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
 const target = devMode ? 'web' : 'browserslist';
 const devtool = devMode ? 'source-map' : undefined;
-const pageNames = [
-  'index.html',
-  'main.html',
-  'tags/genre.html',
-  'tags/catalog.html',
-  'tags/authors.html',
-  'tags/languages.html',
-  'contacts.html',
-  'rules.html',
-  'registration/rules.html',
-  'registration/registration.html',
-  'registration/result.html',
-  'bookmarks.html',
-];
+const pageNames = ['index.html', 'main.html'];
 function getMpa() {
   const htmlwebpackplugins = [];
   pageNames.forEach((pageName) => {
     htmlwebpackplugins.push(
       new HtmlWebpackPlugin({
         Title: `${pageName} page`,
-        template: path.resolve(__dirname, 'src', 'pages', `${pageName}`),
+        template: path.resolve(__dirname, 'src', 'pages', `${pageName}`) ,
         filename: `${pageName}`,
         MiniFy: true, // Generate the compressed HTML code.
       }),
