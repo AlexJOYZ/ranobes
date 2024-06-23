@@ -1,0 +1,116 @@
+@import '../vars';
+.green {
+  .bookmarks-inner {
+    .bookmarks-nav {
+      a {
+        color: #6d6d6dcc;
+        border-color: #00000047;
+        &:first-child {
+          background-color: #0000001a;
+          padding: 8px;
+          border-width: 0;
+          &:hover {
+            background-color: #93ab7b;
+            color: #fff;
+          }
+        }
+        &:hover {
+          color: #1a1a1ab3;
+          border-color: #1a1a1ab3;
+        }
+      }
+      .active {
+        color: #94ab7b;
+      }
+    }
+    .bookmarks-tab-content {
+      .alert {
+        background: #fcf6d2;
+      }
+      .bookmark-novel {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        .novel-top {
+          .bookmark-inner {
+            background-color: #fff;
+            border-left: 1px solid #c1c1c17d;
+            border-bottom: 1px solid #c1c1c17d;
+          }
+          .bookmark-container {
+            .bookmark-popup {
+              &:before {
+                border-color: transparent transparent #dcdcdc transparent;
+              }
+              background-color: #fbfbfb;
+              border: 1px solid #dcdcdc;
+              .popup-list {
+                color: #1a1a1a;
+                .popup-item:hover {
+                  background-color: #e0e8d8;
+                }
+              }
+            }
+          }
+
+          .bookmark-line {
+            text-transform: uppercase;
+            z-index: 9;
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 10px;
+            color: rgb(#ccc, 0.5);
+            padding-bottom: 6px;
+            height: 32px;
+            line-height: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            align-items: center;
+            padding-top: 7px;
+            padding-bottom: 6px;
+            padding-left: 16px;
+            .line {
+              margin-left: 12px;
+              box-sizing: border-box;
+              width: 100%;
+              height: 1px;
+              opacity: 0.5;
+              background: linear-gradient(90deg, #929292, #94ab7b 100%);
+            }
+          }
+        }
+        .novel-note {
+          background-color: #f3f3f3;
+          color: #1a1a1a;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $breakpoint_sm) {
+  .green {
+    .bookmarks-inner {
+      .bookmarks-tab-content .bookmark-novel:hover {
+        background-color: #fff;
+      }
+      .bookmarks-tab-content .bookmark-novel .novel-top {
+        .bookmark-inner {
+          border-width: 0;
+        }
+        .bookmark-container {
+          background: #fff;
+        }
+        .bookmark-line {
+          color: rgb(#1a1a1a, 0.5);
+          font-size: 12px;
+          .line {
+            opacity: 1;
+            background-image: linear-gradient(90deg, #929292, #94ab7b 100%);
+          }
+        }
+      }
+    }
+  }
+}

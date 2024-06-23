@@ -71,7 +71,7 @@ const checkEmail = async (email) => {
   }
 };
 
-const checkPassword = async (password, passwordConfirm) => {
+export const checkPassword = async (password, passwordConfirm) => {
   if (!(password.length >= 6)) {
     createErrorMessageAnimation('The password must be at least 6 characters!');
     return true;

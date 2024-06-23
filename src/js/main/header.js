@@ -1,3 +1,5 @@
+import { setThemes } from './setThemes';
+
 const page = document.querySelector('.page');
 const menuHeader = document.querySelector('menu');
 const menuColor = document.querySelector('.greenmenu');
@@ -34,8 +36,8 @@ window.addEventListener('scroll', () => {
       headerTop.classList.remove('fixed');
       menuColor.classList.remove('fixed');
     }
-  } 
-  
+  }
+
   if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 20) {
     menuHeader.classList.add('modify');
   } else {
@@ -45,7 +47,7 @@ window.addEventListener('scroll', () => {
 
 burgerBtn.onclick = () => {
   scrollResolution(burger);
-  burger.classList.toggle('change');
+  burgerBtn.classList.toggle('change');
   menuHeader.classList.toggle('change');
   loginPanel.classList.remove('open__login');
   headerThemes.classList.remove('open__theme');
@@ -53,7 +55,7 @@ burgerBtn.onclick = () => {
 loginBtn.onclick = () => {
   scrollResolution(loginPanel);
   loginPanel.classList.toggle('open__login');
-  burger.classList.remove('change');
+  burgerBtn.classList.remove('change');
   menuHeader.classList.remove('change');
   headerThemes.classList.remove('open__theme');
 };
@@ -61,9 +63,10 @@ themeBtn.onclick = () => {
   headerThemes.classList.toggle('open__theme');
   page.classList.remove('fixed');
   loginPanel.classList.remove('open__login');
-  burger.classList.remove('change');
+  burgerBtn.classList.remove('change');
   menuHeader.classList.remove('change');
 };
+setThemes();
 UpperBtn.onclick = () => {
   window.scroll({
     top: 0,

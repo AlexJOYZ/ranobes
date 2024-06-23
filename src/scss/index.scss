@@ -8,7 +8,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-body {
+body,select {
   background-color: $bodyColour;
   font-family: 'GothamPro-Light';
   font-size: 14px;
@@ -17,13 +17,13 @@ body {
   line-height: 1.5;
   color: #cccccc;
   &::-webkit-scrollbar {
-    width: .8em
+    width: 0.8em;
   }
   &::-webkit-scrollbar-thumb {
     background-color: #606060;
     border: 2px solid #494949;
     border-right: 0;
-    border-radius: 15px 0 0 15px
+    border-radius: 15px 0 0 15px;
   }
   .page {
     max-width: 1320px;
@@ -44,9 +44,38 @@ body {
     top: 0;
     transition: all 0.4s ease-in;
   }
-  input {
+  select,
+  textarea,
+  input[type='text'],
+  input[type='password'],
+  input[type='file'],
+  input[type='datetime'],
+  input[type='datetime-local'],
+  input[type='date'],
+  input[type='month'],
+  input[type='time'],
+  input[type='week'],
+  input[type='number'],
+  input[type='email'],
+  input[type='url'],
+  input[type='search'],
+  input[type='tel'],
+  input[type='color'] {
     outline: none;
     font-size: 14px;
+    color: #ccc;
+    display: inline-block;
+    width: 300px;
+    height: 40px;
+    line-height: 22px;
+    padding: 8px 15px;
+    vertical-align: middle;
+    border-radius: 4px;
+    background: #343434bf;
+    border: 1px solid #313131;
+    transition: border 0.2s linear 0;
+    box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
   }
   [type='search']::-webkit-search-cancel-button,
   [type='search']::-webkit-search-decoration {
@@ -95,7 +124,7 @@ body {
   }
   .content {
     width: 67.74%;
-    min-height: 100vh;
+    min-height: 120vh;
     border-right: 1px solid #3b3b3b;
     .notifications {
       position: fixed;
@@ -316,3 +345,5 @@ body {
 @import './rules/style.rules';
 @import './registration/style.registration';
 @import './bookmarks/style.bookmarks';
+@import './account/style.account';
+@import './themes/style.themes-index';

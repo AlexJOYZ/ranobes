@@ -18,7 +18,8 @@ const pageNames = [
   'registration/rules.html',
   'registration/registration.html',
   'registration/result.html',
-  'bookmarks.html',
+  'bookmarks.html',,
+  'account.html'
 ];
 function getMpa() {
   const htmlwebpackplugins = [];

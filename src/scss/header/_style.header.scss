@@ -26,18 +26,19 @@
   .btn__menu svg {
     transition: all 0.3s;
   }
+  .btn__menu:first-child {
+    svg {
+      fill: $colorHeaderIcons;
+      
+    }
+  }
   .btn__menu:hover {
     svg {
       fill: #171717;
       stroke: #171717;
     }
   }
-  .btn__menu:first-child:hover {
-    svg {
-      fill: $colorHeaderIcons;
-      stroke: $colorHeaderIcons;
-    }
-  }
+  
   .svg__logo {
     width: calc($widthHeader/2);
     height: calc($widthHeader/2);
@@ -172,7 +173,7 @@
       }
       input {
         margin-bottom: 20px;
-        width: calc(100% - 32px);
+        width: 100%;
         border-radius: 4px;
         line-height: 22px;
         background: #343434bf;
@@ -305,8 +306,11 @@
     opacity: 0.4;
   }
 
-  .burger.change {
+  .change {
     opacity: 1;
+    .burger{
+      opacity: 1;
+    }
     .burger__line {
       background-color: transparent;
     }
@@ -350,10 +354,16 @@
   .header__themes {
     display: flex;
     align-items: center;
+    .btn__menu:hover{
+      img {
+        opacity: 1;
+      }
+    }
     .header__theme {
       z-index: 401;
       cursor: pointer;
     }
+
     .themes__pop-up {
       position: absolute;
       opacity: 0;
@@ -459,6 +469,13 @@
       width: 32px;
       display: none;
     }
+    .nightmode-icon {
+      height: 48px;
+      width: 48px;
+      opacity: 0.4;
+      display: none;
+      transition: all .2s;
+    }
   }
 
   .header__upper {
@@ -494,6 +511,11 @@
       transition: all 0.2s ease-in-out;
     }
     .icon-skin_m {
+      transform: scale(0.5, 0.5);
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+    }
+    .nightmode-icon {
       transform: scale(0.5, 0.5);
       opacity: 0;
       transition: all 0.2s ease-in-out;
@@ -639,7 +661,7 @@
       display: none;
     }
   }
-  form .search-active{
+  form .search-active {
     display: block;
   }
   nav {

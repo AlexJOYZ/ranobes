@@ -8,6 +8,16 @@
   .user-avatar {
     display: block;
   }
+  .unauth {
+    display: none;
+  }
+  
+  .header .login-panel {
+    display: block;
+    .admin-img {
+      display: none;
+    }
+  }
   .admin {
     .user-avatar {
       display: none;
@@ -22,15 +32,7 @@
       display: none;
     }
   }
-  .header .login-panel {
-    display: block ;
-    .admin-img {
-      display: none;
-    }
-  }
-  .unauth {
-    display: none;
-  }
+  
 }
 @media (max-width: $breakpoint_xxl) {
   .authorized {

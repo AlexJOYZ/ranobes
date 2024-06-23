@@ -2,7 +2,6 @@ import { createErrorMessageAnimation } from '../animations/createErrorAnimation'
 import { countFolders } from '../utils/countNovelInCollection';
 import { getDataFromDB } from '../utils/getDataFromDB';
 
-
 const showErrorAnimations = () =>
   createErrorMessageAnimation("You don't have access, go through authorization");
 
@@ -20,9 +19,12 @@ const closePopUp = (event) => {
 
 const addBookmarkToDB = async (event) => {
   const bookmarkName = event.target.closest('a');
-  const currentNovel = bookmarkName.closest('.novel');
+  const currentNovel = bookmarkName.closest('.novel') || bookmarkName.closest('.bookmark-novel');
   const bookmarkBtn = currentNovel.querySelector('.bookmark__title');
-  const nameNovel = currentNovel.querySelector('.novel__link').textContent;
+  let nameNovel = currentNovel.querySelector('.novel__link');
+  !!nameNovel
+    ? (nameNovel = nameNovel.textContent.trim())
+    : (nameNovel = currentNovel.querySelector('.novel-title').textContent.trim());
 
   bookmarkName.classList.toggle('active');
   const userId = window.localStorage.getItem('userId');
@@ -70,9 +72,9 @@ export const addNovelsInBookmarks = (isAuth) => {
   const bookmarkBtns = document.querySelectorAll('.btn-bookmark');
   const bookmarksPopUp = document.querySelectorAll('.bookmark-popup');
   const listsBookmarks = document.querySelectorAll('.popup-list');
-  console.log(bookmarkBtns,bookmarksPopUp,listsBookmarks)
   if (isAuth) {
     bookmarkBtns?.forEach((button) => button?.addEventListener('click', switchPopUp));
+
     listsBookmarks?.forEach((listBookmarks) =>
       listBookmarks?.addEventListener('click', addBookmarkToDB),
     );

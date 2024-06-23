@@ -1,0 +1,38 @@
+.green {
+  .tags-tabs {
+    border-color: #e7e7e7;
+    a {
+      &:hover {
+        color: #3d3d3d;
+      }
+      border-color: #e7e7e7;
+    }
+    .tags-active {
+      color: #1a1a1a;
+    }
+  }
+  .tab-content {
+    .genre,
+    .language {
+      border-color: #ecf0f1;
+      h3 {
+        color: #3b3b3b;
+      }
+    }
+
+    .language-description {
+      border-color: #ecf0f1;
+    }
+  }
+
+  .dotted-line {
+    border-color: #efefef;
+  }
+  .tag {
+    background-color: #f0f0f0;
+    &:hover {
+      background-color: #95ac7c;
+      color: #fff;
+    }
+  }
+}

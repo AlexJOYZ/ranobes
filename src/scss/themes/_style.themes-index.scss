@@ -1,0 +1,87 @@
+.green {
+  body,
+  select {
+    background-color: #eee;
+    color: #1a1a1a;
+    &::-webkit-scrollbar {
+      width: 0.8em;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #999;
+      border: 1px solid #cacaca;
+    }
+    .body {
+      background-color: #fff;
+    }
+    select,
+    textarea,
+    input[type='text'],
+    input[type='password'],
+    input[type='file'],
+    input[type='datetime'],
+    input[type='datetime-local'],
+    input[type='date'],
+    input[type='month'],
+    input[type='time'],
+    input[type='week'],
+    input[type='number'],
+    input[type='email'],
+    input[type='url'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='color'] {
+      background: #fbfbfb;
+      border: 1px solid #dcdcdc;
+      color: inherit;
+    }
+  }
+  input::placeholder {
+    font-size: 14px;
+    font-family: 'GothamPro-Light';
+    font-weight: 600;
+    color: #fff;
+  }
+  .page-title {
+    color: rgba(0, 0, 0, 0.6);
+    border-left: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    a {
+      color: #272727;
+    }
+  }
+  main {
+    border-left: solid #e7e7e7 1px;
+  }
+  .content {
+    border-right: 1px solid #e7e7e7;
+    .notifications .notification {
+      background-color: #dcdcdc;
+    }
+  }
+  .footer {
+    border-left: 1px solid #e7e7e7;
+    background-color: #fff;
+    border-top: 1px solid #e7e7e7;
+    border-radius: 0px 0px 8px 0px;
+    a:hover {
+      color: #1a1a1a;
+    }
+  }
+  .btn {
+    background-image: -webkit-linear-gradient(top, #9db681 0%, #95ac7c 100%);
+    background-color: #95ac7c;
+    color: #efefef;
+    &:hover {
+      background-color: #a2be84;
+      background-image: -webkit-linear-gradient(top, #a7c486 0%, #9db880 100%);
+    }
+  }
+}
+@import './style.themes-newnovels';
+@import './style.themes-aside';
+@import './style.themes-header';
+@import './style.themes-tags';
+@import './style.themes-contacts';
+@import './style.themes-registration';
+@import './style.themes-bookmarks';
+@import './style.themes-account';

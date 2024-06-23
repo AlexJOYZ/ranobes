@@ -68,7 +68,6 @@
               <svg class="svg__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
                 <rect />
                 <path
-                  fill="#323232"
                   width="40px"
                   d="M10.09,40.1h7.08V29.8h5.47l7,10.3h8.28L30.05,28.6a10,10,0,0,0,6.9-10,10.18,10.18,0,0,0-2.76-7.45C32.07,9.05,28.9,7.9,24.8,7.9H10.09Zm7.08-16.56V14.29h7c3.45,0,5.56,1.57,5.56,4.6,0,2.81-2,4.65-5.43,4.65Z"
                 />
@@ -156,6 +155,7 @@
                 <svg class="icon m_ico icon-skin_m">
                   <use xlink:href="#icon-skin_m"></use>
                 </svg>
+                <img class="nightmode-icon" src="../img/nightmode-icon.svg" >
                 <span class="btn__close">
                   <i class="line1"></i>
                   <i class="line2"></i>
@@ -163,7 +163,7 @@
               </a>
               <ul class="themes__pop-up">
                 <li style="order: 1">
-                  <a class="theme__green">
+                  <a class="theme__green" id="green">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -172,7 +172,7 @@
                   </a>
                 </li>
                 <li class="active" style="order: 2">
-                  <a class="theme__dgreen">
+                  <a class="theme__dgreen" id="dark">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -181,7 +181,7 @@
                   </a>
                 </li>
                 <li style="order: 3">
-                  <a class="theme__dblue">
+                  <a class="theme__dblue" id="blue">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -190,7 +190,7 @@
                   </a>
                 </li>
                 <li style="order: 4">
-                  <a class="theme__amoled">
+                  <a class="theme__amoled" id="dark-amoled">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -221,7 +221,7 @@
                   </div>
                 </form>
                 <nav class="nav">
-                  <a href="" class="active nav__link"> <i class="fas fa-home"></i>Home</a>
+                  <a href="" class="nav__link"> <i class="fas fa-home"></i>Home</a>
                   <a href="" class="nav__link"><i class="fas fa-book-open"></i>Novels</a>
                   <a href="" class="nav__link"><i class="fas fa-sync"></i>Updates</a>
                   <a href="" class="nav__link"><i class="fas fa-fire"></i>Popular</a>
@@ -256,7 +256,7 @@
         </header>
         <h2 class="page-title">
           <a href="./index.html">Ranobes</a> » My bookmarks
-          <span class="bookmark-name"> » Dropped</span>
+          <span class="bookmark-name"></span>
         </h2>
 
         <main>
@@ -271,439 +271,15 @@
                       d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
                     ></path></svg
                 ></a>
-                <a class="active">All</a>
-                <a>Viewed<span>0</span></a>
-                <a>Reading now<span>0</span></a>
-                <a>Will read<span>0</span></a>
-                <a>Awaiting<span>0</span></a>
-                <a>Delayed<span>0</span></a>
-                <a>Dropped<span>0</span></a>
+                <a class="bookmark-link active">All</a>
+                <a class="bookmark-link">Viewed<span></span></a>
+                <a class="bookmark-link">Reading now<span></span></a>
+                <a class="bookmark-link">Will read<span></span></a>
+                <a class="bookmark-link">Awaiting<span></span></a>
+                <a class="bookmark-link">Delayed<span></span></a>
+                <a class="bookmark-link">Dropped<span></span></a>
               </nav>
-              <div class="bookmarks-tab-content">
-                <div class="bookmark-novel">
-                  <div class="novel-top">
-                    <img class="novel-img" src="../img/blood-warlock.jpg" alt="novel image" />
-                    <div class="novel-info">
-                      <a class="novel-title">
-                        Top Tier Providence, Secretly Cultivate for a Thousand Years</a
-                      >
-                      <a class="novel-sub-title">Chapter <span>1360</span></a>
-                      <div class="novel-tools">
-                        <div class="novel__rate-date">
-                          <div class="unit__rating">
-                            <div class="current__rating" style="width: 94%">
-                              <img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              />
-                            </div>
-                            <img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img src="http://localhost:3500/img/stars-rate.svg" alt="star-rate" />
-                          </div>
-                        </div>
-                        <div class="novel-meta">
-                          <div class="novel-update">
-                            <i class="fas fa-sync"></i><span>13 hours ago</span>
-                          </div>
-                          <div class="novel-status">
-                            <i class="fas fa-hourglass-end"></i>70 ≥ 500+
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="bookmark-inner">
-                      <div class="bookmark-container">
-                        <a class="btn-bookmark"
-                          ><div class="bookmark">
-                            <img src="http://localhost:3500/img/bookmark-icon.svg" alt="bookmark" />
-                            <p class="bookmark__title">Bookmark</p>
-                          </div></a
-                        >
-                        <div class="bookmark-popup">
-                          <div class="popup-list">
-                            <a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Viewed</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Reading now</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Will read</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Awaiting</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Delayed</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Dropped</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Finished</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="bookmark-sm">
-                      <div class="bookmark-line">
-                        bookmark
-                        <div class="line"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="novel-note"><img src="../img/bookmark-note-corner.svg" alt="note corner">Double click here to edit a note...</div>
-                </div><div class="bookmark-novel novel">
-                  <div class="novel-top">
-                    <img class="novel-img" src="../img/blood-warlock.jpg" alt="novel image" />
-                    <div class="novel-info">
-                      <a class="novel-title">
-                        Top Tier Providence, Secretly Cultivate for a Thousand Years</a
-                      >
-                      <a class="novel-sub-title">Chapter <span>1360</span></a>
-                      <div class="novel-tools">
-                        <div class="novel__rate-date">
-                          <div class="unit__rating">
-                            <div class="current__rating" style="width: 94%">
-                              <img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              />
-                            </div>
-                            <img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img src="http://localhost:3500/img/stars-rate.svg" alt="star-rate" />
-                          </div>
-                        </div>
-                        <div class="novel-meta">
-                          <div class="novel-update">
-                            <i class="fas fa-sync"></i><span>13 hours ago</span>
-                          </div>
-                          <div class="novel-status">
-                            <i class="fas fa-hourglass-end"></i>70 ≥ 500+
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="bookmark-inner">
-                      <div class="bookmark-container">
-                        <a class="btn-bookmark"
-                          ><div class="bookmark">
-                            <img src="http://localhost:3500/img/bookmark-icon.svg" alt="bookmark" />
-                            <p class="bookmark__title">Bookmark</p>
-                          </div></a
-                        >
-                        <div class="bookmark-popup">
-                          <div class="popup-list">
-                            <a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Viewed</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Reading now</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Will read</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Awaiting</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Delayed</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Dropped</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Finished</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="bookmark-sm">
-                      <div class="bookmark-line">
-                        bookmark
-                        <div class="line"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="novel-note"><img src="../img/bookmark-note-corner.svg" alt="note corner">Double click here to edit a note...</div>
-                </div><div class="bookmark-novel">
-                  <div class="novel-top">
-                    <img class="novel-img" src="../img/blood-warlock.jpg" alt="novel image" />
-                    <div class="novel-info">
-                      <a class="novel-title">
-                        Top Tier Providence, Secretly Cultivate for a Thousand Years</a
-                      >
-                      <a class="novel-sub-title">Chapter <span>1360</span></a>
-                      <div class="novel-tools">
-                        <div class="novel__rate-date">
-                          <div class="unit__rating">
-                            <div class="current__rating" style="width: 94%">
-                              <img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              /><img
-                                src="http://localhost:3500/img/stars-rate-current.svg"
-                                alt="star-rate"
-                              />
-                            </div>
-                            <img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img
-                              src="http://localhost:3500/img/stars-rate.svg"
-                              alt="star-rate"
-                            /><img src="http://localhost:3500/img/stars-rate.svg" alt="star-rate" />
-                          </div>
-                        </div>
-                        <div class="novel-meta">
-                          <div class="novel-update">
-                            <i class="fas fa-sync"></i><span>13 hours ago</span>
-                          </div>
-                          <div class="novel-status">
-                            <i class="fas fa-hourglass-end"></i>70 ≥ 500+
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="bookmark-inner">
-                      <div class="bookmark-container">
-                        <a class="btn-bookmark"
-                          ><div class="bookmark">
-                            <img src="http://localhost:3500/img/bookmark-icon.svg" alt="bookmark" />
-                            <p class="bookmark__title">Bookmark</p>
-                          </div></a
-                        >
-                        <div class="bookmark-popup">
-                          <div class="popup-list">
-                            <a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Viewed</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Reading now</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Will read</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Awaiting</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Delayed</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Dropped</a
-                            ><a class="popup-item"
-                              ><div class="poup-img">
-                                <img
-                                  src="http://localhost:3500/img/bookmarks.png"
-                                  alt="dote picture"
-                                  class="poup-img-dote"
-                                />
-                              </div>
-                              Finished</a
-                            >
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="bookmark-sm">
-                      <div class="bookmark-line">
-                        bookmark
-                        <div class="line"></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="novel-note"><img src="../img/bookmark-note-corner.svg" alt="note corner">Double click here to edit a note...</div>
-                </div>
-                
-                
-              </div>
+              <div class="bookmarks-tab-content"></div>
             </div>
           </div>
           <aside>

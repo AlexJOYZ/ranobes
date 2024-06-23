@@ -11,12 +11,11 @@ export const generateUserDataPanelHTML = async () => {
   const { login, isAdmin, novelColections } = userData;
   isAdmin ? loginPanel.classList.add('admin') : '';
   loginName.textContent = login;
-  const nameColections = Object.keys(novelColections);
-  let countBookmarks = 0;
-  nameColections.forEach((collection) => {
-    countBookmarks += novelColections[collection].length;
-  });
-  countBookmarksSpan.textContent = countBookmarks;
+  const setNovels = new Set()  
+    for (const key in novelColections) {
+      novelColections[key].forEach((novel) => setNovels.add(novel))
+    }
+  countBookmarksSpan.textContent = setNovels.size;
   logoutBtn.onclick = () => {
     window.localStorage.removeItem('userId');
     window.location.reload();
