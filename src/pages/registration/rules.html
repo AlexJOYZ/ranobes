@@ -68,7 +68,6 @@
               <svg class="svg__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
                 <rect />
                 <path
-                  fill="#323232"
                   width="40px"
                   d="M10.09,40.1h7.08V29.8h5.47l7,10.3h8.28L30.05,28.6a10,10,0,0,0,6.9-10,10.18,10.18,0,0,0-2.76-7.45C32.07,9.05,28.9,7.9,24.8,7.9H10.09Zm7.08-16.56V14.29h7c3.45,0,5.56,1.57,5.56,4.6,0,2.81-2,4.65-5.43,4.65Z"
                 />
@@ -156,6 +155,7 @@
                 <svg class="icon m_ico icon-skin_m">
                   <use xlink:href="#icon-skin_m"></use>
                 </svg>
+                <img class="nightmode-icon" src="../../img/nightmode-icon.svg" />
                 <span class="btn__close">
                   <i class="line1"></i>
                   <i class="line2"></i>
@@ -163,7 +163,7 @@
               </a>
               <ul class="themes__pop-up">
                 <li style="order: 1">
-                  <a class="theme__green">
+                  <a class="theme__green" id="green">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -172,7 +172,7 @@
                   </a>
                 </li>
                 <li class="active" style="order: 2">
-                  <a class="theme__dgreen">
+                  <a class="theme__dgreen" id="dark">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -181,7 +181,7 @@
                   </a>
                 </li>
                 <li style="order: 3">
-                  <a class="theme__dblue">
+                  <a class="theme__dblue" id="blue">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -190,7 +190,7 @@
                   </a>
                 </li>
                 <li style="order: 4">
-                  <a class="theme__amoled">
+                  <a class="theme__amoled" id="dark-amoled">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -221,10 +221,8 @@
                   </div>
                 </form>
                 <nav class="nav">
-                  <a href="../index.html" class="active nav__link">
-                    <i class="fas fa-home"></i>Home</a
-                  >
-                  <a href="" class="nav__link"><i class="fas fa-book-open"></i>Novels</a>
+                  <a href="../index.html" class="nav__link"> <i class="fas fa-home"></i>Home</a>
+                  <a href="../novels.html" class="nav__link link-novels"><i class="fas fa-book-open"></i>Novels <span>0</span></a>
                   <a href="" class="nav__link"><i class="fas fa-sync"></i>Updates</a>
                   <a href="" class="nav__link"><i class="fas fa-fire"></i>Popular</a>
                   <div class="nav__border"></div>
@@ -243,7 +241,9 @@
                   <a href="../contacts.html" class="nav__link"
                     ><i class="fas fa-envelope"></i>Contacts</a
                   >
-                  <a href="../rules.html" class="nav__link"><i class="fas fa-receipt"></i>Rules</a>
+                  <a href="../rules.html" class="active nav__link"
+                    ><i class="fas fa-receipt"></i>Rules</a
+                  >
                 </nav>
               </div>
             </menu>

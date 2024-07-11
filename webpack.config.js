@@ -19,6 +19,8 @@ const pageNames = [
   'registration/registration.html',
   'registration/result.html',
   'bookmarks.html',
+  'account.html',
+  'novels.html',
 ];
 function getMpa() {
   const htmlwebpackplugins = [];
@@ -112,7 +114,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpe?g|png|gif|svg|webp)$/i,
+        test: /\.(jpe?g|png|gif|svg|webp|jpg)$/i,
         type: 'asset/resource',
         use: {
           loader: 'image-webpack-loader',

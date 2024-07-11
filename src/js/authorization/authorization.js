@@ -4,12 +4,12 @@ import { getDataFromDB } from '../utils/getDataFromDB';
 import { getDataFromForm } from '../utils/getDataFromForm';
 
 let countFailedAuth = 0;
-
 const loginForm = document.querySelector('.unauth');
 loginForm?.addEventListener('submit', async (event) => {
   event.preventDefault();
   const data = dataFromArrToObject(getDataFromForm(loginForm).entries());
   const { login: formLogin, password: formPassword } = data;
+  console.log(formLogin,formPassword)
   const requiredData = await getDataFromDB('users', 'login', formLogin);
   const { login: userLogin, password: userPassword,id } = requiredData[0] || {};
   if (formLogin === userLogin && formPassword === userPassword) {

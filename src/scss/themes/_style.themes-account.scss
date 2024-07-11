@@ -1,0 +1,58 @@
+@import '../vars';
+.green {
+  .modal {
+    background: rgba(0, 0, 0, 0.3);
+    .modal-content {
+      background-color: #fff;
+      i {
+        background-color: #f1f1f1;
+      }
+    }
+  }
+  .user-info-top {
+    border-color: #efefef;
+    .info-text {
+      .user-tabs {
+        border-color: #e7e7e7;
+        a {
+          border-color: #e7e7e7;
+          &:hover {
+            color: #646464;
+          }
+        }
+        .active {
+          color: #1a1a1a;
+          &:hover {
+            color: #1a1a1a;
+          }
+        }
+      }
+    }
+  }
+
+  .tabs-user-content {
+    .tab-info {
+      li {
+        border-color: #e7e7e7;
+      }
+    }
+    .form-account {
+      li {
+        .select {
+          .img-dark {
+            display: none;
+          }
+          .img-green {
+            display: block;
+          }
+        }
+        input[type='file'] {
+          box-shadow: none;
+        }
+      }
+      .line {
+        border-top-color: #efefef;
+      }
+    }
+  }
+}
