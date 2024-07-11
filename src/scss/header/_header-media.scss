@@ -1,6 +1,5 @@
 @import '../vars';
 
-
 @media (max-width: $breakpoint_xxl) {
   .header {
     width: calc($widthHeader - 20px);
@@ -49,13 +48,21 @@
       top: 7px;
     }
     .header__themes .themes__pop-up {
-      left: calc($widthHeader - 20px) ;
+      left: calc($widthHeader - 20px);
     }
     .icon-skin_ {
       display: none;
     }
     .header__themes .icon-skin_m {
-      display: block ;
+      display: block;
+    }
+    .sort {
+      .icon-sort {
+        display: none;
+      }
+      .icon-sort_m {
+        display: block;
+      }
     }
     .header__upper {
       width: calc($widthHeader - 20px);
@@ -69,8 +76,8 @@
   .menu {
     margin-left: calc($widthHeader - 20px);
     form .search__bar {
-      height: 60px ;
-      padding: 18px 68px 18px 25px ;
+      height: 60px;
+      padding: 18px 68px 18px 25px;
     }
   }
   .menu.modify {
@@ -99,13 +106,13 @@
         box-shadow: none;
       }
       .drop__panel {
-        margin-left: 0 ;
+        margin-left: 0;
         position: fixed;
         left: 0;
         bottom: 0;
         padding: 20px;
         background: #474747;
-        min-width: calc(100% - 40px) ;
+        min-width: calc(100% - 40px);
         box-shadow: none;
       }
       .btn__burger {
@@ -116,7 +123,7 @@
       }
       .open__theme {
         .themes__pop-up {
-          transform: translate(0, 30%) scale(1) ;
+          transform: translate(0, 30%) scale(1);
         }
       }
 
@@ -125,8 +132,8 @@
         align-items: center;
         justify-content: center;
         top: calc($widthHeader - 30px);
-        left: calc(($widthHeader - 20px) * 2) ;
-        transform: translate(0, -50%) scale(0.7) ;
+        left: calc(($widthHeader - 20px) * 2);
+        transform: translate(0, -50%) scale(0.7);
         li {
           &:first-child,
           &:last-child {
@@ -135,6 +142,17 @@
             position: relative;
           }
           margin-left: 0;
+        }
+      }
+      .sort {
+        .sort-menu {
+          top:60px;
+          width: 100%;
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          padding: 20px;
+          box-shadow: none;
         }
       }
       menu {
@@ -166,6 +184,6 @@
     position: fixed;
     top: calc($widthHeader - 20px);
     box-shadow: none;
-    min-width: 100% ;
+    min-width: 100%;
   }
 }

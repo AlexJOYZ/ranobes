@@ -8,7 +8,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
-body,select {
+body,
+select {
   background-color: $bodyColour;
   font-family: 'GothamPro-Light';
   font-size: 14px;
@@ -228,6 +229,73 @@ body,select {
         display: none;
       }
     }
+    .loader-inner {
+      position: fixed;
+      width: calc(100vw + 60px);
+      height: calc(100vh + 60px);
+      top: -30px;
+      left: -30px;
+      right: -30px;
+      bottom: 0;
+      z-index: 9999;
+      background-color: #474747;
+      .loader {
+        position: fixed;
+        top: 50vh;
+        left: 50vw;
+        transform: translate(-50%, -50%);
+        z-index: 9999;
+        width: 100px;
+        height: 100px;
+        opacity: 0.6;
+        transition: opacity .2s;
+        &:before {
+          width: 100px;
+          height: 100px;
+          background-color: #3b3b3b;
+          animation: load1 1s infinite ease;
+        }
+        &::after {
+          width: 40px;
+          height: 40px;
+          background-color: #1a1a1a;
+          animation: load2 1s infinite -0.32s ease;
+        }
+        &:before,
+        &:after {
+          border-radius: 50%;
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      @keyframes load1 {
+        0%,
+        80%,
+        100% {
+          transform: translate(-50%, -50%) scale(1, 1);
+        }
+        40% {
+          transform: translate(-50%, -50%) scale(0.6);
+        }
+      }
+      @keyframes load2 {
+        0%,
+        80%,
+        100% {
+          transform: translate(-50%, -50%) scale(1, 1);
+        }
+        40% {
+          transform: translate(-50%, -50%) scale(0.5);
+        }
+      }
+    }
+    .hide {
+      opacity: 0;
+      z-index: -1;
+    }
   }
   .footer {
     display: flex;
@@ -345,5 +413,6 @@ body,select {
 @import './rules/style.rules';
 @import './registration/style.registration';
 @import './bookmarks/style.bookmarks';
+@import './novels/style.novels';
 @import './account/style.account';
 @import './themes/style.themes-index';

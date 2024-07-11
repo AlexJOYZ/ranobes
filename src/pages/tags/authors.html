@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en ru" class="green">
+<html lang="en ru" >
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,7 +68,6 @@
               <svg class="svg__logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
                 <rect />
                 <path
-                
                   width="40px"
                   d="M10.09,40.1h7.08V29.8h5.47l7,10.3h8.28L30.05,28.6a10,10,0,0,0,6.9-10,10.18,10.18,0,0,0-2.76-7.45C32.07,9.05,28.9,7.9,24.8,7.9H10.09Zm7.08-16.56V14.29h7c3.45,0,5.56,1.57,5.56,4.6,0,2.81-2,4.65-5.43,4.65Z"
                 />
@@ -156,7 +155,7 @@
                 <svg class="icon m_ico icon-skin_m">
                   <use xlink:href="#icon-skin_m"></use>
                 </svg>
-                <img class="nightmode-icon" src="../../img/nightmode-icon.svg" >
+                <img class="nightmode-icon" src="../../img/nightmode-icon.svg" />
                 <span class="btn__close">
                   <i class="line1"></i>
                   <i class="line2"></i>
@@ -173,7 +172,7 @@
                   </a>
                 </li>
                 <li class="active" style="order: 2">
-                  <a class="theme__dgreen" id="dark-green">
+                  <a class="theme__dgreen" id="dark">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -182,7 +181,7 @@
                   </a>
                 </li>
                 <li style="order: 3">
-                  <a class="theme__dblue" id="dark-blue"">
+                  <a class="theme__dblue" id="blue">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -222,10 +221,8 @@
                   </div>
                 </form>
                 <nav class="nav">
-                  <a href="../index.html" class=" nav__link">
-                    <i class="fas fa-home"></i>Home</a
-                  >
-                  <a href="" class="nav__link"><i class="fas fa-book-open"></i>Novels</a>
+                  <a href="../index.html" class="nav__link"> <i class="fas fa-home"></i>Home</a>
+                  <a href="../novels.html" class="nav__link link-novels"><i class="fas fa-book-open"></i>Novels <span>0</span></a>
                   <a href="" class="nav__link"><i class="fas fa-sync"></i>Updates</a>
                   <a href="" class="nav__link"><i class="fas fa-fire"></i>Popular</a>
                   <div class="nav__border"></div>
@@ -261,6 +258,9 @@
         <h2 class="page-title"><a href="../index.html">Ranobes</a> » Authors</h2>
         <main>
           <div class="content">
+            <div class="loader-inner">
+              <div class="loader"></div>
+            </div>
             <div class="tags-tabs">
               <a href="./catalog.html">Tags catalog</a>
               <a href="./genre.html">Genres</a>

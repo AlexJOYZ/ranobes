@@ -155,7 +155,7 @@
                 <svg class="icon m_ico icon-skin_m">
                   <use xlink:href="#icon-skin_m"></use>
                 </svg>
-                <img class="nightmode-icon" src="../../img/nightmode-icon.svg" >
+                <img class="nightmode-icon" src="../../img/nightmode-icon.svg" />
                 <span class="btn__close">
                   <i class="line1"></i>
                   <i class="line2"></i>
@@ -172,7 +172,7 @@
                   </a>
                 </li>
                 <li class="active" style="order: 2">
-                  <a class="theme__dgreen" id="dark-green">
+                  <a class="theme__dgreen" id="dark">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -181,7 +181,7 @@
                   </a>
                 </li>
                 <li style="order: 3">
-                  <a class="theme__dblue" id="dark-blue"">
+                  <a class="theme__dblue" id="blue">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -221,10 +221,8 @@
                   </div>
                 </form>
                 <nav class="nav">
-                  <a href="../index.html" class=" nav__link">
-                    <i class="fas fa-home"></i>Home</a
-                  >
-                  <a href="" class="nav__link"><i class="fas fa-book-open"></i>Novels</a>
+                  <a href="../index.html" class="nav__link"> <i class="fas fa-home"></i>Home</a>
+                  <a href="../novels.html" class="nav__link link-novels"><i class="fas fa-book-open"></i>Novels <span>0</span></a>
                   <a href="" class="nav__link"><i class="fas fa-sync"></i>Updates</a>
                   <a href="" class="nav__link"><i class="fas fa-fire"></i>Popular</a>
                   <div class="nav__border"></div>
@@ -260,6 +258,9 @@
         <h2 class="page-title"><a href="../index.html">Ranobes</a> » Events</h2>
         <main>
           <div class="content">
+            <div class="loader-inner">
+              <div class="loader"></div>
+            </div>
             <div class="tags-tabs">
               <a href="./catalog.html" class="tags-active">Tags catalog</a>
               <a href="./genre.html">Genres</a>
@@ -267,7 +268,7 @@
               <a href="./languages.html">Languages</a>
             </div>
             <div class="dotted-line"></div>
-            <div class="tab-content block ">
+            <div class="tab-content block">
               <!-- <a href="" class="tag">Abandoned Children</a>
               <a href="" class="tag">Ability Steal</a>
               <a href="" class="tag">Absent Parents</a>

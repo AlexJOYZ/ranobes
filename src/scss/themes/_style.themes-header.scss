@@ -82,6 +82,57 @@
         stroke: #1a1a1a;
       }
     }
+    .sort {
+      .btn__menu {
+        cursor: pointer;
+        &:hover {
+          svg {
+            opacity: 1;
+          }
+        }
+      }
+      .icon-sort,
+      .icon-sort_m {
+        color: #1a1a1a;
+        opacity: 0.4;
+      }
+      .sort-menu {
+        background-color: #95ac7c;
+
+        ul {
+          li {
+            color: rgb(255, 255, 255, 0.8);
+            &:hover {
+              a {
+                color: #fff;
+              }
+            }
+            i {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+    .active {
+      .btn__menu {
+        background: #95ac7c;
+        svg {
+          opacity: 0;
+        }
+        &:hover {
+          svg {
+            opacity: 0;
+          }
+        }
+      }
+
+      .btn__close {
+        i {
+          background-color: #fff;
+        }
+      }
+    }
     .menu {
       background-color: #95ac7c;
       form {

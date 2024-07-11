@@ -1,0 +1,143 @@
+@import '../vars';
+
+.green {
+  .novels {
+    .novel__heading {
+      border-color: #efefef;
+      .form-group {
+        .form-item {
+          input[type='text'],
+          select,
+          textarea {
+            border: 1px solid #dcdcdc;
+            box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.03);
+            &::placeholder {
+              color: #1a1a1a;
+            }
+          }
+          .languages {
+            label {
+              span {
+                background-color: #fff;
+                color: #95ac7c;
+                border: 1px solid #95ac7c;
+              }
+              input {
+                &:checked + span {
+                  color: #fff;
+                  background-color: #95ac7c;
+                  box-shadow: 0 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.03);
+                }
+              }
+            }
+          }
+          .selector-sort {
+            .selector__inner {
+              .selector-choices {
+                color: #ccc;
+                background: #fbfbfb;
+                border-color: #dcdcdc;
+                li {
+                  border-color: #999;
+                  background-color: #dcdcdc;
+                  color: #4a4a49;
+                  i {
+                    &:hover {
+                      color: #3d3d3d;
+                    }
+                  }
+                }
+                input {
+                  background: #fbfbfb;
+                  color: #757575;
+                }
+              }
+              .active-input {
+                border-color: #95ac7c85;
+                box-shadow: 0 0 5px #90b95a59;
+              }
+              .drop-container {
+                background-color: #fff;
+                color: #444;
+                border-color: #95ac7c85;
+                box-shadow: 0 0 5px #90b95a59;
+
+                .selector__drop {
+                  &::-webkit-scrollbar-thumb {
+                    background-color: #95ac7c;
+                    border-radius: 15px;
+                  }
+                  li {
+                    &:hover {
+                      background-color: #95ac7c;
+                      color: #e7f7d5;
+                    }
+                  }
+                  .selected {
+                    color: #95ac7c;
+                  }
+                  .no-result {
+                    color: #785500;
+                    background-color: #d3bc99;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .form-checkbox {
+          label {
+            border: none;
+            box-shadow: none;
+          }
+        }
+      }
+
+      .form-submit {
+        .btn-reset {
+          background-color: #fff;
+        }
+      }
+    }
+    .novel-navigation {
+      .pages {
+        a {
+          &:hover {
+            border-color: #95ac7c;
+            color: #95ac7c;
+          }
+        }
+      }
+    }
+    .novel-content {
+      .error-message {
+        background-color: #fcf6d2;
+      }
+    }
+  }
+  @media (max-width: $breakpoint_sm) {
+    .novels {
+      .novel-navigation {
+        .navigation-btns {
+          .btn-prev {
+            border-color: #eaeaea;
+          }
+        }
+        .pages {
+          background-color: #95ac7c;
+          a {
+            &:hover {
+              border-color: #1a1a1a;
+              color: #1a1a1a;
+            }
+          }
+          .current{
+            border-color: #fff;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

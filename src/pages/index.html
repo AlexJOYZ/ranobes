@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en ru" >
+<html lang="en ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -155,7 +155,7 @@
                 <svg class="icon m_ico icon-skin_m">
                   <use xlink:href="#icon-skin_m"></use>
                 </svg>
-                <img class="nightmode-icon" src="../img/nightmode-icon.svg" >
+                <img class="nightmode-icon" src="../img/nightmode-icon.svg" />
                 <span class="btn__close">
                   <i class="line1"></i>
                   <i class="line2"></i>
@@ -172,7 +172,7 @@
                   </a>
                 </li>
                 <li class="active" style="order: 2">
-                  <a class="theme__dgreen" id="dark-green">
+                  <a class="theme__dgreen" id="dark">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -181,7 +181,7 @@
                   </a>
                 </li>
                 <li style="order: 3">
-                  <a class="theme__dblue" id="dark-blue"">
+                  <a class="theme__dblue" id="blue">
                     <span>
                       <svg width="24" height="24">
                         <use xlink:href="#icon-skin-check"></use>
@@ -222,11 +222,15 @@
                 </form>
                 <nav class="nav">
                   <a href="" class="active nav__link"> <i class="fas fa-home"></i>Home</a>
-                  <a href="" class="nav__link"><i class="fas fa-book-open"></i>Novels</a>
+                  <a href="./novels.html" class="nav__link link-novels"
+                    ><i class="fas fa-book-open"></i>Novels <span>0</span></a
+                  >
                   <a href="" class="nav__link"><i class="fas fa-sync"></i>Updates</a>
                   <a href="" class="nav__link"><i class="fas fa-fire"></i>Popular</a>
                   <div class="nav__border"></div>
-                  <a href="" class="nav__link"><i class="fas fa-list"></i>Genre catalog</a>
+                  <a href="./tags/genre.html" class="nav__link"
+                    ><i class="fas fa-list"></i>Genre catalog</a
+                  >
                   <a href="" class="nav__link"
                     ><i class="fas fa-clipboard-check"></i>Completed novels</a
                   >
@@ -256,6 +260,9 @@
         <main>
           <div class="content">
             <div class="notifications"></div>
+            <div class="loader-inner">
+              <div class="loader"></div>
+            </div>
             <div class="new__novels"></div>
             <div class="new__chapters">
               <div class="title-stripes block">
