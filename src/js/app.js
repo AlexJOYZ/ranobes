@@ -9,3 +9,4 @@ import './registration/resultRegistration';
 import './authorization/authorization';
 import './main/main';
 import '../scss/index.scss';
+
